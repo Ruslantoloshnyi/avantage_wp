@@ -1,0 +1,743 @@
+/*Homepage header*/
+
+.header {
+    background-image: url('../image/bg.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: right top;
+    
+}
+
+
+@media (max-width: 991px) {
+    .header {
+        background-image: url('../image/bg-table.jpg');
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        background-image: url('../image/bg-mobile.jpg');
+        height: 100vh;
+        background-size: cover;
+        background-position: right top;
+
+    }
+}
+
+.bg-avantage {
+    background-color: #1ABC9C;
+}
+
+.nav-item a {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #4A4646;
+}
+
+
+.title-head h1 {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 70px;
+    color: #ffff;
+}
+
+.title-content {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: #4A4646;
+}
+
+.title-foot {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: #4A4646;
+}
+
+
+
+
+.title-href {
+    margin-top: 50px;
+    margin-left: 24px;
+    background-color: #1ABC9C;
+}
+
+.title-href a {
+    outline: #1ABC9C;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    text-decoration: none;
+    color: #ffff;
+}
+
+
+
+/*Homepage info section*/
+
+.info {
+    margin-top: 50px;
+}
+
+.img-one {
+    height: 115px;
+}
+
+.info-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.info-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    color: #1ABC9C;
+}
+
+.info-content {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #4A4646;
+}
+
+/*Homepage Grid section*/
+
+.grid h1 {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    color: #4A4646;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 230.71px);
+    grid-column-gap: 14px;
+    grid-row-gap: 16px;
+    grid-template-areas:
+        "post-1 post-1 post-2 post-3"
+        "post-4 post-5 post-6 post-3"
+        "post-7 post-7 post-6 post-8"
+        "post-7 post-7 post-9 post-9"
+        "post-10 post-11 post-9 post-9"
+        "post-10 post-12 post-12 post-13"
+}
+
+.grid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+@media (max-width: 767px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(13, 230.71px);
+        grid-column-gap: 14px;
+        grid-row-gap: 16px;
+        grid-template-areas:
+            "post-1"
+            "post-2"
+            "post-3"
+            "post-4"
+            "post-5"
+            "post-6"
+            "post-7"
+            "post-8"
+            "post-9"
+            "post-10"
+            "post-11"
+            "post-12"
+            "post-13";
+    }
+
+    .grid-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }   
+
+}
+
+
+.grid-item1 {
+    grid-area: post-1;
+}
+
+.grid-item2 {
+    grid-area: post-2;
+}
+
+.grid-item3 {
+    grid-area: post-3;
+}
+
+.grid-item4 {
+    grid-area: post-4;
+}
+
+.grid-item5 {
+    grid-area: post-5;
+}
+
+.grid-item6 {
+    grid-area: post-6;
+}
+
+.grid-item7 {
+    grid-area: post-7;
+}
+
+.grid-item8 {
+    grid-area: post-8;
+}
+
+.grid-item9 {
+    grid-area: post-9;
+}
+
+.grid-item10 {
+    grid-area: post-10;
+}
+
+.grid-item11 {
+    grid-area: post-11;
+}
+
+.grid-item12 {
+    grid-area: post-12;
+}
+
+.grid-item13 {
+    grid-area: post-13;
+}
+
+/*Booking section*/
+
+.booking h1 {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    text-align: center;
+    color: #4A4646;
+}
+
+.booking p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #4A4646;
+}
+
+.booking span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #1ABC9C;
+}
+
+
+
+.booking-span-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #1ABC9C;
+}
+
+span.booking-span-price {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+}
+
+span.booking-text-content {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000000;
+}
+
+
+/*footer*/
+
+.footer-section {
+    background-color: #1ABC9C;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer-menu ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-nav a {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    color: #ffff !important;
+}
+
+.footer-nav-line {
+    text-decoration: underline;
+}
+
+.footer-nav li {
+    padding-top: 64px;
+}
+
+.footer-adress {
+    display: flex;
+    padding-top: 64px;
+}
+
+.footer-head {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+.footer-content {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration-line: underline;
+
+    color: #FFFFFF;
+
+}
+
+.footer-content-two {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.footer-dist {
+    padding-top: 105px;
+}
+
+/*Rooms*/
+
+.header-rooms {
+    background-image: url('../image/rooms-bg.jpg');
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rooms-title {
+    margin-top: 150px;
+    text-align: center;
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 48px;
+    color: #4A4646;
+}
+
+.rooms-card {
+    text-align: center;
+    border-radius: 32px 32px 32px 32px;
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.15);
+    margin-bottom: 60px;
+}
+
+.rooms-card-head {
+    text-align: left;
+    padding-top: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    color: #1ABC9C;
+}
+
+.rooms-card-pinc {
+    display: flex;
+    padding-top: 10px;
+}
+
+.card-pinc {
+    margin-right: 12px;
+}
+
+.container-card {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.rooms-content {
+    padding-top: 10px;
+    text-align: left;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #4A4646;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.rooms-button {
+    background-color: white;
+    border: 2px solid #1ABC9C;
+    border-radius: 32px 32px 32px 32px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: #4A4646;
+}
+
+.card-price {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: right;
+    color: #4A4646;
+}
+
+/*zoom-room*/
+
+.header-zoom-room {
+    background: rgba(255, 255, 255, 0.69);
+    box-shadow: 0px 4px 29px rgba(0, 0, 0, 0.1);
+}
+
+.zoom-room-head {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 48px;
+    color: #4A4646;
+    text-align: center;
+}
+
+.zoom-room-pic {
+    justify-content: center;
+    height: 75px;
+    display: flex;
+}
+
+.zoom-room-pic-img {
+    margin: auto;
+}
+
+.zoom-room-pic-text {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+}
+
+.zoom-room-head-section {
+    padding-top: 60px;
+}
+
+.zoom-room-info-content {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.container-slyder {
+    margin-left: 289px;
+    margin-right: 289px;
+}
+
+.zoom-room-slyder-section {
+    margin-top: 60px;
+}
+
+.booking-zoom-room {
+    margin-top: 78px;
+}
+
+.booking-zoom-room p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #4A4646;
+}
+
+.booking-zoom-room span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #1ABC9C;
+}
+
+
+.zoom-room-booking-text-head p .zoom-room-booking-span-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.zoom-room-booking-text-one p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.zoom-room-booking-text {
+    margin-left: 90px;
+    margin-right: 38px;
+}
+
+.container-calendar {
+    height: 330px;
+}
+
+.calendar-head p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #1ABC9C;
+}
+
+.zoom-room-table {
+    width: 99%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.zoom-room-table-one {
+    border-right: 1px solid #1ABC9C;
+    color: #1ABC9C;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 39px;
+}
+
+.zoom-room-table-two {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 34px;
+    padding-left: 20px;
+    color: #000000;
+
+}
+
+.zoom-room-table td {
+    border-bottom: 1px solid #1ABC9C;
+}
+
+/*Booking*/
+
+.booking-title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: #4A4646;
+    margin-top: 52px;
+}
+
+.booking-head {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    color: #4A4646;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.booking-price-content {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #4A4646;
+}
+
+.booking-price-content span {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #1ABC9C;
+}
+
+.booking-table {
+    overflow-x: auto;
+}
+
+.booking-table table {
+    width: 100%;
+}
+
+.booking-table tr {
+    height: 60px;
+}
+
+.booking-table th {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    border-bottom: 1px solid #1ABC9C;
+    border-right: 1px solid #1ABC9C;
+}
+
+.booking-table td {
+    border-bottom: 1px solid #1ABC9C;
+    border-right: 1px solid #1ABC9C;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+    padding-left: 20px;
+    vertical-align: bottom;
+}
+
+.booking-table td.booking-table-one {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #1ABC9C;
+    padding-left: 0px;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.booking-map-text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #4A4646;
+}
+
+.booking-map-text span {
+    padding-left: 105px;
+}
