@@ -176,3 +176,43 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+add_action('wp_enqueue_scripts', 'style_avantage');
+add_action('wp_footer', 'scrypt_avantage');
+add_action('after_setup_theme', 'theme_register_nav_menu');
+
+
+add_filter( 'nav_menu_css_class', 'wp_kama_nav_menu_css_class_filter', 10, 4 );
+add_filter( 'nav_menu_link_attributes', 'nav_link_filter', 10, 4 );
+
+function style_avantage (){
+	
+	wp_enqueue_style('bootstrap.css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
+	wp_enqueue_style('normalyze.css', get_template_directory_uri() . '/assets/css/normalyze.css');
+	wp_enqueue_style('style.css', get_template_directory_uri() . '/assets/css/style.css');
+	wp_enqueue_style('style.css', get_template_directory_uri() . '/assets/css/style.css');
+}
+
+function scrypt_avantage(){
+
+	wp_enqueue_script('bootstrap.style', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js');
+}
+
+function theme_register_nav_menu(){
+	register_nav_menu('header', 'Header Menu');
+}
+
+function wp_kama_nav_menu_css_class_filter( $classes){
+
+	$classes = ['nav-item'];
+	// filter...
+	return $classes;
+}
+
+function nav_link_filter( $attr ){
+
+	$attr['class'] = 'nav-link';
+
+	return $attr;
+}
+
+
