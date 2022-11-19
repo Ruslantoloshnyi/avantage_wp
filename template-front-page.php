@@ -1,4 +1,8 @@
 <?php
+/**
+ * Template Name: front_page
+ * Template post type: page*/
+
 get_header('main')
 ?>
 
@@ -6,157 +10,22 @@ get_header('main')
 <!-- Info Section
     ================================================== -->
 
-<section id="info" class="info">
+<?php
 
-    <div class="container">
+if (have_rows('front_page_content')) {
+   
+    while (have_rows('front_page_content')) {
+        the_row();
 
-        <div class="row">
+        if (get_row_layout() == 'front_page_info_section') {
 
-            <div class="col-6 col-md-4">
-
-                <div class="info-one">
-
-                    <div class="img-one">
-                        <img src="image/info-img1.png" alt="">
-                    </div>
-
-                    <div class="info-title">
-                        <p>20 метрів від пляжу</p>
-                    </div>
-
-                    <div class="info-content">
-                        <p>Готель на самому березі моря. Шаг за дверь – і ви на пляжі. Ніяких утомливих походів
-                            по
-                            жарі.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
+            get_template_part('template-parts/front_page_info');
+        }
+    }
+}
 
 
-            <div class="col-6 col-md-4">
-
-                <div class="info-one">
-
-                    <div class="img-one">
-                        <img class="img2" src="image/info-img2.png" alt="">
-                    </div>
-
-                    <div class="info-title">
-                        <p>Щоденне прибирання</p>
-                    </div>
-
-                    <div class="info-content">
-                        <p>Ми любимо чистоту і порядок, тому у всіх номерах готелю сухе і вологе прибирання
-                            кожен
-                            день.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4">
-                <div class="info-one">
-
-                    <div class="img-one">
-                        <img src="image/info-img3.png" alt="">
-                    </div>
-
-                    <div class="info-title">
-                        <p>Wi-Fi</p>
-                    </div>
-
-                    <div class="info-content">
-                        <p>Безкоштовний бездротовий інтернет для гостей доступний на всій території готелю
-                            Авантаж.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <div class="col-6 col-md-4">
-
-                <div class="info-one">
-
-                    <div class="img-one">
-                        <img src="image/info-img4.png" alt="">
-                    </div>
-
-                    <div class="info-title">
-                        <p>Спокійний сон</p>
-                    </div>
-
-                    <div class="info-content">
-                        <p>
-                            Пicля активного вiдпочинку добре вiдiспатися на великому лiжку з ортопедичним
-                            матрацем,
-                            дихаючи морським повiтрям.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="col-6 col-md-4">
-
-                <div class="info-one">
-
-                    <div class="img-one">
-                        <img class="img2" src="image/info-img5.png" alt="">
-                    </div>
-
-                    <div class="info-title">
-                        <p>Нові меблі</p>
-                    </div>
-
-                    <div class="info-content">
-                        <p>
-                            Ми відкрилися у 2016 році. Вся техніка і меблі у дуже добром стані. Ніяких скрипучих
-                            радянських ліжок.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="col-6 col-md-4">
-
-                <div class="info-one">
-
-                    <div class="img-one">
-                        <img src="image/info-img6.png" alt="">
-                    </div>
-
-                    <div class="info-title">
-                        <p>Охорона і безпека</p>
-                    </div>
-
-                    <div class="info-content">
-                        <p>
-                            Для вашої безпеки територія готелю охороняється. А в кожному номері є сейф для
-                            цінних
-                            речей.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-    </div>
-
-</section> <!-- Info section End -->
+?>
 
 
 <!-- Grid Section
