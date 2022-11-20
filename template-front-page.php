@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template Name: front_page
  * Template post type: page*/
@@ -7,95 +8,33 @@ get_header('main')
 ?>
 
 
-<!-- Info Section
-    ================================================== -->
 
 <?php
 
-if (have_rows('front_page_content')) {
-   
-    while (have_rows('front_page_content')) {
+if (have_rows('front_page_content')) :
+
+    while (have_rows('front_page_content')) :
         the_row();
 
-        if (get_row_layout() == 'front_page_info_section') {
+        if (get_row_layout() == 'front_page_info_section') :
 
             get_template_part('template-parts/front_page_info');
-        }
-    }
-}
+
+        elseif (get_row_layout() == 'front_page_grid_section') :
+
+            get_template_part('template-parts/front_page_grid');
+
+        endif;
+
+    endwhile;
+
+endif;
 
 
 ?>
 
 
-<!-- Grid Section
-   ================================================== -->
 
-<section class="grid">
-
-    <div class="container-fluid">
-
-        <h1>Фото готелю</h1>
-
-        <div class="grid-container">
-
-            <div class="grid-item1">
-                <img class="grid-img" src="image/grid-image1.jpg" alt="">
-            </div>
-
-            <div class="grid-item2">
-                <img class="grid-img" src="image/grid-image2.jpg" alt="">
-            </div>
-
-            <div class="grid-item3">
-                <img class="grid-img" src="image/grid-image3.jpg" alt="">
-            </div>
-
-            <div class="grid-item4">
-                <img class="grid-img" src="image/grid-image4.jpg" alt="">
-            </div>
-
-            <div class="grid-item5">
-                <img class="grid-img" src="image/grid-image5.jpg" alt="">
-            </div>
-
-            <div class="grid-item6">
-                <img class="grid-img" src="image/grid-image6.jpg" alt="">
-            </div>
-
-            <div class="grid-item7">
-                <img class="grid-img" src="image/grid-image7.jpg" alt="">
-            </div>
-
-            <div class="grid-item8">
-                <img class="grid-img" src="image/grid-image8.jpg" alt="">
-            </div>
-
-            <div class="grid-item9">
-                <img class="grid-img" src="image/grid-image9.jpg" alt="">
-            </div>
-
-            <div class="grid-item10">
-                <img class="grid-img" src="image/grid-image10.jpg" alt="">
-            </div>
-
-            <div class="grid-item11">
-                <img class="grid-img" src="image/grid-image11.jpg" alt="">
-            </div>
-
-            <div class="grid-item12">
-                <img class="grid-img" src="image/grid-image12.jpg" alt="">
-            </div>
-
-            <div class="grid-item13">
-                <img class="grid-img" src="image/grid-image13.jpg" alt="">
-            </div>
-
-        </div>
-
-    </div>
-
-</section> <!-- Grid Section End -->
 
 <!-- Booking Section
    ================================================== -->

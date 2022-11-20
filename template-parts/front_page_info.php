@@ -1,8 +1,8 @@
 
-
-
 <?php if (have_rows('front_page_info')) : ?>
 
+    <!-- Info Section
+    ================================================== -->
     <section id="info" class="info">
 
         <div class="container">
