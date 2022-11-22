@@ -11,7 +11,24 @@
  */
 
 ?>
+<?php
+if (have_rows('front_page_content')) :
 
+	while (have_rows('front_page_content')) :
+		the_row();
+
+		if (get_row_layout() == 'front_page_booking_section') :
+
+			$tel1 = get_sub_field('front_page_booking_tel_1');
+			$tel2 = get_sub_field('front_page_booking_tel_2');
+			$mail = get_sub_field('front_page_booking_mail');
+
+		endif;
+
+	endwhile;
+
+endif;
+?>
 <!-- footer
    ================================================== -->
 
@@ -24,14 +41,12 @@
 			<div class="row">
 				<div class="col-6">
 					<div class="footer-menu">
-
-						<ul class="footer-nav">
-							<li><a class="footer-nav-line" href="#"> Головна </a></li>
-							<li><a href="#"> Номери </a></li>
-							<li><a href="#"> Фото готелю </a></li>
-							<li><a href="#"> Бронювання та цiни </a></li>
-						</ul>
-
+						<?php
+						wp_nav_menu([
+							'theme_location'  => 'footer',
+							'menu_class'      => 'footer-nav',
+						]);
+						?>
 					</div>
 
 				</div>
@@ -49,8 +64,8 @@
 							<p>Контакти: </p>
 						</div>
 						<div class="col-12 col-md-6 footer-content-two">
-							<p>(099) 470-99-39; (067) 796-03-94</p>
-							<p>avantagezp@gmail.com</p>
+							<p><?php echo $tel1; ?>; <?php echo $tel2; ?></p>
+							<p><?php echo $mail; ?></p>
 						</div>
 
 					</div>

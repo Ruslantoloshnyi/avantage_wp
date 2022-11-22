@@ -211,6 +211,7 @@ function script_avantage()
 function theme_register_nav_menu()
 {
 	register_nav_menu('header', 'Header Menu');
+	register_nav_menu('footer', 'Footer Menu');
 }
 
 function wp_kama_nav_menu_css_class_filter($classes)
