@@ -1,10 +1,10 @@
 <?php
 
 /**
- * Template Name: room_page
+ * Template Name: room page
  * Template post type: page*/
 
-get_header('room');
+get_header();
 ?>
 
 <?php
