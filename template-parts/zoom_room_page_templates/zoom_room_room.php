@@ -1,5 +1,13 @@
+<?php
+$zoom_room_head = get_sub_field('zoom_room_room_head');
+$image = get_sub_field('zoom_room_room_image');
+$img = wp_get_attachment_image($image, 'full', false);
+?>
+
 <!-- Room section
     ================================================== -->
+
+<?php if (have_rows('zoom_room_room_pic')) : ?>
 
     <section>
         <div class="container-fluid">
@@ -12,111 +20,44 @@
                         <div class="col-12">
 
                             <div class="zoom-room-head">
-                                <h1>Двокімнатний люкс для чотирьох</h1>
+                                <h1><?php echo $zoom_room_head; ?></h1>
                             </div>
 
                         </div>
 
-                        <div class="col-md-6 col-4">
-                            <div>
+                        <?php while (have_rows('zoom_room_room_pic')) : the_row();
+                            $image_pic = get_sub_field('zoom_room_room_pic_image');
+                            $img_pic = wp_get_attachment_image($image_pic, 'full', false);
+                            $text = get_sub_field('zoom_room_room_pic_text');
+                        ?>
 
-                                <div class="zoom-room-pic">
-                                    <img src="../avantage/image/zoom-room-pic/zoom-room-bed.png"
-                                        class="zoom-room-pic-img" alt="">
+                            <div class="col-md-6 col-4">
+                                <div>
+
+                                    <div class="zoom-room-pic">
+                                        <?php echo $img_pic; ?>
+                                    </div>
+
+                                    <div class="zoom-room-pic-text">
+                                        <p><?php echo $text; ?></p>
+                                    </div>
+
                                 </div>
-
-                                <div class="zoom-room-pic-text">
-                                    <p>2 двоспальних ліжка</p>
-                                </div>
-
                             </div>
-                        </div>
 
-                        <div class="col-md-6 col-4">
-                            <div>
-
-                                <div class="zoom-room-pic">
-                                    <img src="../avantage/image/zoom-room-pic/zoom-room-man.png"
-                                        class="zoom-room-pic-img" alt="">
-                                </div>
-
-                                <div class="zoom-room-pic-text">
-                                    <p>4-5 осіб</p>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-4">
-                            <div>
-
-                                <div class="zoom-room-pic">
-                                    <img src="../avantage/image/zoom-room-pic/zoom-room-pic-sea.png"
-                                        class="zoom-room-pic-img" alt="">
-                                </div>
-
-                                <div class="zoom-room-pic-text">
-                                    <p>Вид на море</p>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-4">
-                            <div>
-
-                                <div class="zoom-room-pic">
-                                    <img src="../avantage/image/zoom-room-pic/zoom-room-pic-48м2.png"
-                                        class="zoom-room-pic-img" alt="">
-                                </div>
-
-                                <div class="zoom-room-pic-text">
-                                    <p>Площа номеру</p>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-4">
-                            <div>
-
-                                <div class="zoom-room-pic">
-                                    <img src="../avantage/image/zoom-room-pic/zoom-room-pic-air-conditioner.png"
-                                        class="zoom-room-pic-img" alt="">
-                                </div>
-
-                                <div class="zoom-room-pic-text">
-                                    <p>Кондиціонер</p>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 col-4">
-                            <div>
-
-                                <div class="zoom-room-pic">
-                                    <img src="../avantage/image/zoom-room-pic/zoom-room-pic-wifi.png"
-                                        class="zoom-room-pic-img" alt="">
-                                </div>
-
-                                <div class="zoom-room-pic-text">
-                                    <p>Wi-Fi</p>
-                                </div>
-
-                            </div>
-                        </div>
-
+                        <?php endwhile; ?>
 
                     </div>
 
                 </div>
 
                 <div class="col-md-8 col-12 order-md-2 order-1">
-                    <img src="../avantage/image/zoom-room-img-head.jpg" class="img-fluid" alt="Responsive img">
+                    <?php echo $img; ?>
                 </div>
 
             </div>
         </div>
 
     </section><!-- Room section End -->
+
+<?php endif; ?>
