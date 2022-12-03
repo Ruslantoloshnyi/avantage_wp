@@ -17,7 +17,15 @@ if (have_rows('booking_content')) :
         if (get_row_layout() == 'booking_calculation_section') :
 
             get_template_part('template-parts/booking_page_templates/booking_calculation');
-        
+
+        elseif (get_row_layout() == 'booking_price_section') :
+
+            get_template_part('template-parts/booking_page_templates/booking_price');
+
+        elseif (get_row_layout() == 'booking_table_section') :
+
+            get_template_part('template-parts/booking_page_templates/booking_table');
+
         endif;
 
     endwhile;
