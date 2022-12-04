@@ -3,9 +3,9 @@
     $price_2 = get_sub_field('zoom_room_booking_price_2');
     $price_3 = get_sub_field('zoom_room_booking_price_3');
     $price_4 = get_sub_field('zoom_room_booking_price_4');
-    $tel1 = get_sub_field('front_page_booking_tel_1');
-    $tel2 = get_sub_field('front_page_booking_tel_2');
-    $mail = get_sub_field('front_page_booking_mail');
+    $tel_1 = get_field('footer_tel_1');
+    $tel_2 = get_field('footer_tel_2');
+    $mail = get_field('footer_mail');
     ?>
  <!-- Booking Section
    ================================================== -->
@@ -18,7 +18,7 @@
              <h1>Бронювання</h1>
          </div>
 
-         <p>Забронювати номер можна за телефоном - <span><?php echo $tel1; ?></span> або <span><?php echo $tel2; ?></span> </p>
+         <p>Забронювати номер можна за телефоном - <span><?php echo $tel_1; ?></span> або <span><?php echo $tel_2; ?></span> </p>
          <p>Поштою – <span><?php echo $mail; ?></span></p>
          <p>Не забудьте вказати тип номера і дати заїзду та виїзду, так ми швидше вам <br>допоможемо.</p>
 

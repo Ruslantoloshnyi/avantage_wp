@@ -12,22 +12,9 @@
 
 ?>
 <?php
-if (have_rows('front_page_content')) :
-
-	while (have_rows('front_page_content')) :
-		the_row();
-
-		if (get_row_layout() == 'front_page_booking_section') :
-
-			$tel1 = get_sub_field('front_page_booking_tel_1');
-			$tel2 = get_sub_field('front_page_booking_tel_2');
-			$mail = get_sub_field('front_page_booking_mail');
-
-		endif;
-
-	endwhile;
-
-endif;
+$tel_1 = get_field('footer_tel_1');
+$tel_2 = get_field('footer_tel_2');
+$mail = get_field('footer_mail');
 ?>
 <!-- footer
    ================================================== -->
@@ -64,7 +51,7 @@ endif;
 							<p>Контакти: </p>
 						</div>
 						<div class="col-12 col-md-6 footer-content-two">
-							<p><?php echo $tel1; ?>; <?php echo $tel2; ?></p>
+							<p><?php echo $tel_1; ?>; <?php echo $tel_2; ?></p>
 							<p><?php echo $mail; ?></p>
 						</div>
 

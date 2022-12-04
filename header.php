@@ -47,7 +47,7 @@
 
     <!-- Header
     ================================================== -->
-    <header class="header">
+    <header class="">
 
         <nav class="navbar navbar-expand-md navbar-light bg-avantage">
             <div class="container-fluid">

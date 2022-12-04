@@ -26,10 +26,10 @@ if (have_rows('zoom_room_content')) :
 
             get_template_part('template-parts/zoom_room_page_templates/zoom_room_slider');
 
-            elseif (get_row_layout() == 'zoom_room_booking_section') :
+        elseif (get_row_layout() == 'zoom_room_booking_section') :
 
-                get_template_part('template-parts/zoom_room_page_templates/zoom_room_booking');
-    
+            get_template_part('template-parts/zoom_room_page_templates/zoom_room_booking');
+
 
         endif;
 
