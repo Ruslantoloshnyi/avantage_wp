@@ -4,6 +4,8 @@ $content = get_sub_field('room_page_lux_two_content');
 $price = get_sub_field('room_page_lux_two_price');
 $attr = ['class' => 'img-fluid', 'alt' => 'Responsive image'];
 $img = wp_get_attachment_image($image, 'full', false, $attr);
+$id = '242'; 
+$id_lux_two = get_permalink($id); 
 ?>
 
 <!-- Rooms Section
@@ -42,11 +44,13 @@ $img = wp_get_attachment_image($image, 'full', false, $attr);
                         <div class="rooms-content"><?php echo $content; ?></div>
 
                         <div class="card-footer">
-                            <button type="button" class="rooms-button">Детальніше</button>
+                            
+                                <a href="<?php echo $id_lux_two; ?>"><button type="button" class="rooms-button">Детальніше</button></a>
+                            
                             <div class="card-price"><?php echo $price; ?></div>
                         </div>
 
                     </div>
                 </div>
-       
-<?php endif; ?>
+
+            <?php endif; ?>
