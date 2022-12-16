@@ -4,6 +4,8 @@ $content = get_sub_field('room_page_comfort_three_content');
 $price = get_sub_field('room_page_comfort_three_price');
 $attr = ['class' => 'img-fluid', 'alt' => 'Responsive image'];
 $img = wp_get_attachment_image($image, 'full', false, $attr);
+$id = '261'; 
+$id_comfort_three = get_permalink($id); 
 ?>
 
 <?php if (have_rows('room_page_comfort_three_pic')) : ?>
@@ -36,7 +38,7 @@ $img = wp_get_attachment_image($image, 'full', false, $attr);
             <div class="rooms-content"><?php echo $content; ?></div>
 
             <div class="card-footer">
-                <button type="button" class="rooms-button">Детальніше</button>
+                <a href="<?php echo $id_comfort_three; ?>"><button type="button" class="rooms-button">Детальніше</button></a>
                 <div class="card-price"><?php echo $price; ?></div>
             </div>
         </div>
