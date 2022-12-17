@@ -380,6 +380,11 @@ span.booking-text-content {
 
 /*Rooms*/
 
+.rooms-card-image {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .header-rooms {
     background-image: url('../image/rooms-bg.jpg');
     height: 100vh;

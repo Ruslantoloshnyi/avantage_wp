@@ -38,7 +38,7 @@ $id_lux_four_two = get_permalink($id);
             <div class="rooms-content"><?php echo $content; ?></div>
 
             <div class="card-footer">
-                <a href="<?php echo id_lux_for_two; ?>"><button type="button" class="rooms-button">Детальніше</button></a>
+                <a href="<?php echo $id_lux_for_two; ?>"><button type="button" class="rooms-button">Детальніше</button></a>
                 <div class="card-price"><?php echo $price; ?></div>
             </div>
         </div>
