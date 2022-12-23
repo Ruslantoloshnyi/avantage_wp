@@ -10,7 +10,7 @@
 
             $attr = ['class' => 'img-fluid', 'alt' => 'Responsive image'];
             $img = wp_get_attachment_image($image, 'full', false, $attr);
-            $img_2 = wp_get_attachment_image($image, 'full', false, $attr);
+            $img_2 = wp_get_attachment_image($image_2, 'full', false, $attr);
         ?>
 
             <div class="container-fluid">

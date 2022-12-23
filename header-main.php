@@ -14,6 +14,11 @@
  */
 ?>
 
+<?php 
+$id = '14';
+$id_room = get_permalink($id);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,9 +74,9 @@
                         <p>Залізний Порт</p>
                     </div>
 
-                    <button type="button" style="background-color: #1ABC9C" class="btn btn-primary title-href">Обрати
+                    <a href="<?php echo $id_room; ?>"><button type="button" style="background-color: #1ABC9C" class="btn btn-primary title-href">Обрати
                         номер
-                    </button>
+                    </button></a>
 
                 </div>
 
