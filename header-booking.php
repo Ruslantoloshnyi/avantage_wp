@@ -39,8 +39,6 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Merriweather?query=Merriweather">
 
-
-
     <? wp_head();
     ?>
 </head>

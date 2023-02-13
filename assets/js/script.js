@@ -21,13 +21,6 @@ $(function () {
     $('#datepicker-2').datepicker();
 });
 
-const luxTwo = { '1': '1000', '2': '1000', '3': '1000', '4': '1000', '5': '1000', '6': '1000', '7': '1000', '8': '1000', '9': '1000', '10': '1000' };
-const comfortTwo = { '1': '2000', '2': '1000', '3': '1000', '4': '1000', '5': '1000', '6': '1000', '7': '1000', '8': '1000', '9': '1000', '10': '1000' };
-const luxThree = { '1': '3000', '2': '1000', '3': '1000', '4': '1000', '5': '1000', '6': '1000', '7': '1000', '8': '1000', '9': '1000', '10': '1000' };
-const comfortThree = { '1': '4000', '2': '1000', '3': '1000', '4': '1000', '5': '1000', '6': '1000', '7': '1000', '8': '1000', '9': '1000', '10': '1000' };
-const luxFour = { '1': '5000', '2': '1000', '3': '1000', '4': '1000', '5': '1000', '6': '1000', '7': '1000', '8': '1000', '9': '1000', '10': '1000' };
-const luxFourTwo = { '1': '6000', '2': '1000', '3': '1000', '4': '1000', '5': '1000', '6': '1000', '7': '1000', '8': '1000', '9': '1000', '10': '1000' };
-
 function getDayofYear(date) {
     let now = new Date(date);
     const start = new Date(now.getFullYear(), 0, 0);
@@ -36,6 +29,219 @@ function getDayofYear(date) {
     const day = Math.floor(diff / oneDay);
     return day;
 };
+
+function firstSegment(arrEmpty) {
+    const firstDate = new Date(2023, 5, 1);
+    const firstDay = getDayofYear(firstDate);
+
+    for (let i = 0; i < 14; i++) {
+        arrEmpty.push(firstDay + i);
+    }
+    return arrEmpty;
+};
+
+function secondSegment(arrEmpty) {
+    const firstDate = new Date(2023, 5, 1);
+    const firstDay = getDayofYear(firstDate) + 14;
+
+    for (let i = 0; i < 11; i++) {
+        arrEmpty.push(firstDay + i);
+    }
+    return arrEmpty;
+};
+
+function thirdSegment(arrEmpty) {
+    const firstDate = new Date(2023, 5, 1);
+    const firstDay = getDayofYear(firstDate) + 25;
+
+    for (let i = 0; i < 67; i++) {
+        arrEmpty.push(firstDay + i);
+    }
+    return arrEmpty;
+};
+
+function fourthSegment(arrEmpty) {
+    const firstDate = new Date(2023, 5, 1);
+    const firstDay = getDayofYear(firstDate) + 92;
+
+    for (let i = 0; i < 30; i++) {
+        arrEmpty.push(firstDay + i);
+    }
+    return arrEmpty;
+};
+
+let arrLuxTwoFirst = [];
+let arrLuxTwoSecond = [];
+let arrLuxTwoThird = [];
+let arrLuxTwoFourth = [];
+
+let arrComfortTwoFirst = [];
+let arrComfortTwoSecond = [];
+let arrComfortTwoThird = [];
+let arrComfortTwoFourth = [];
+
+let arrComfortThreeFirst = [];
+let arrComfortThreeSecond = [];
+let arrComfortThreeThird = [];
+let arrComfortThreeFourth = [];
+
+let arrLuxThreeFirst = [];
+let arrLuxThreeSecond = [];
+let arrLuxThreeThird = [];
+let arrLuxThreeFourth = [];
+
+let arrLuxFourFirst = [];
+let arrLuxFourSecond = [];
+let arrLuxFourThird = [];
+let arrLuxFourFourth = [];
+
+let arrLuxFourTwoFirst = [];
+let arrLuxFourTwoSecond = [];
+let arrLuxFourTwoThird = [];
+let arrLuxFourTwoFourth = [];
+
+firstSegment(arrLuxTwoFirst);
+secondSegment(arrLuxTwoSecond);
+thirdSegment(arrLuxTwoThird);
+fourthSegment(arrLuxTwoFourth);
+
+firstSegment(arrComfortTwoFirst);
+secondSegment(arrComfortTwoSecond);
+thirdSegment(arrComfortTwoThird);
+fourthSegment(arrComfortTwoFourth);
+
+firstSegment(arrComfortThreeFirst);
+secondSegment(arrComfortThreeSecond);
+thirdSegment(arrComfortThreeThird);
+fourthSegment(arrComfortThreeFourth);
+
+firstSegment(arrLuxThreeFirst);
+secondSegment(arrLuxThreeSecond);
+thirdSegment(arrLuxThreeThird);
+fourthSegment(arrLuxThreeFourth);
+
+firstSegment(arrLuxFourFirst);
+secondSegment(arrLuxFourSecond);
+thirdSegment(arrLuxFourThird);
+fourthSegment(arrLuxFourFourth);
+
+firstSegment(arrLuxFourTwoFirst);
+secondSegment(arrLuxFourTwoSecond);
+thirdSegment(arrLuxFourTwoThird);
+fourthSegment(arrLuxFourTwoFourth);
+
+let objLuxTwoFirst = {};
+let objLuxTwoSecond = {};
+let objLuxTwoThird = {};
+let objLuxTwoFourth = {};
+
+let objComfortTwoFirst = {};
+let objComfortTwoSecond = {};
+let objComfortTwoThird = {};
+let objComfortTwoFourth = {};
+
+let objComfortThreeFirst = {};
+let objComfortThreeSecond = {};
+let objComfortThreeThird = {};
+let objComfortThreeFourth = {};
+
+let objLuxThreeFirst = {};
+let objLuxThreeSecond = {};
+let objLuxThreeThird = {};
+let objLuxThreeFourth = {};
+
+let objLuxFourFirst = {};
+let objLuxFourSecond = {};
+let objLuxFourThird = {};
+let objLuxFourFourth = {};
+
+let objLuxFourTwoFirst = {};
+let objLuxFourTwoSecond = {};
+let objLuxFourTwoThird = {};
+let objLuxFourTwoFourth = {};
+
+for (let i = 0; i < arrLuxTwoFirst.length; i++) {
+    objLuxTwoFirst[arrLuxTwoFirst[i]] = arrPrice[2];
+};
+for (let i = 0; i < arrComfortTwoFirst.length; i++) {
+    objComfortTwoFirst[arrComfortTwoFirst[i]] = arrPrice[0];
+};
+for (let i = 0; i < arrComfortThreeFirst.length; i++) {
+    objComfortThreeFirst[arrComfortThreeFirst[i]] = arrPrice[1];
+};
+for (let i = 0; i < arrLuxThreeFirst.length; i++) {
+    objLuxThreeFirst[arrLuxThreeFirst[i]] = arrPrice[3];
+};
+for (let i = 0; i < arrLuxFourFirst.length; i++) {
+    objLuxFourFirst[arrLuxFourFirst[i]] = arrPrice[4];
+};
+for (let i = 0; i < arrLuxFourTwoFirst.length; i++) {
+    objLuxFourTwoFirst[arrLuxFourTwoFirst[i]] = arrPrice[5];
+};
+
+for (let i = 0; i < arrLuxTwoSecond.length; i++) {
+    objLuxTwoSecond[arrLuxTwoSecond[i]] = arrPrice[8];
+};
+for (let i = 0; i < arrComfortTwoSecond.length; i++) {
+    objComfortTwoSecond[arrComfortTwoSecond[i]] = arrPrice[6];
+};
+for (let i = 0; i < arrComfortThreeSecond.length; i++) {
+    objComfortThreeSecond[arrComfortThreeSecond[i]] = arrPrice[7];
+};
+for (let i = 0; i < arrLuxThreeSecond.length; i++) {
+    objLuxThreeSecond[arrLuxThreeSecond[i]] = arrPrice[9];
+};
+for (let i = 0; i < arrLuxFourSecond.length; i++) {
+    objLuxFourSecond[arrLuxFourSecond[i]] = arrPrice[10];
+};
+for (let i = 0; i < arrLuxFourTwoSecond.length; i++) {
+    objLuxFourTwoSecond[arrLuxFourTwoSecond[i]] = arrPrice[11];
+};
+
+for (let i = 0; i < arrLuxTwoThird.length; i++) {
+    objLuxTwoThird[arrLuxTwoThird[i]] = arrPrice[14];
+};
+for (let i = 0; i < arrComfortTwoThird.length; i++) {
+    objComfortTwoThird[arrComfortTwoThird[i]] = arrPrice[12];
+};
+for (let i = 0; i < arrComfortThreeThird.length; i++) {
+    objComfortThreeThird[arrComfortThreeThird[i]] = arrPrice[13];
+};
+for (let i = 0; i < arrLuxThreeThird.length; i++) {
+    objLuxThreeThird[arrLuxThreeThird[i]] = arrPrice[15];
+};
+for (let i = 0; i < arrLuxFourThird.length; i++) {
+    objLuxFourThird[arrLuxFourThird[i]] = arrPrice[16];
+};
+for (let i = 0; i < arrLuxFourTwoThird.length; i++) {
+    objLuxFourTwoThird[arrLuxFourTwoThird[i]] = arrPrice[17];
+};
+
+for (let i = 0; i < arrLuxTwoFourth.length; i++) {
+    objLuxTwoFourth[arrLuxTwoFourth[i]] = arrPrice[20];
+};
+for (let i = 0; i < arrComfortTwoFourth.length; i++) {
+    objComfortTwoFourth[arrComfortTwoFourth[i]] = arrPrice[18];
+};
+for (let i = 0; i < arrComfortThreeFourth.length; i++) {
+    objComfortThreeFourth[arrComfortThreeFourth[i]] = arrPrice[19];
+};
+for (let i = 0; i < arrLuxThreeFourth.length; i++) {
+    objLuxThreeFourth[arrLuxThreeFourth[i]] = arrPrice[21];
+};
+for (let i = 0; i < arrLuxFourFourth.length; i++) {
+    objLuxFourFourth[arrLuxFourFourth[i]] = arrPrice[22];
+};
+for (let i = 0; i < arrLuxFourTwoFourth.length; i++) {
+    objLuxFourTwoFourth[arrLuxFourTwoFourth[i]] = arrPrice[23];
+};
+
+const luxTwo = Object.assign(objLuxTwoFirst, objLuxTwoSecond, objLuxTwoThird, objLuxTwoFourth);
+const comfortTwo = Object.assign(objComfortTwoFirst, objComfortTwoSecond, objComfortTwoThird, objComfortTwoFourth);
+const comfortThree = Object.assign(objComfortThreeFirst, objComfortThreeSecond, objComfortThreeThird, objComfortThreeFourth);
+const luxThree = Object.assign(objLuxThreeFirst, objLuxThreeSecond, objLuxThreeThird, objLuxThreeFourth);
+const luxFour = Object.assign(objLuxFourFirst, objLuxFourSecond, objLuxFourThird, objLuxFourFourth);
+const luxFourTwo = Object.assign(objLuxFourTwoFirst, objLuxFourTwoSecond, objLuxFourTwoThird, objLuxFourTwoFourth);
 
 let checkIn = document.querySelector('#check-in');
 let checkOut = document.querySelector('#check-out');
@@ -63,7 +269,7 @@ $(document).ready(function () {
             let date2 = new Date(valueOutArr[2], valueOutArr[0] - 1, valueOutArr[1]);
 
             let dayOfYearIn = getDayofYear(date);
-            let dayOfYearOut = getDayofYear(date2);
+            let dayOfYearOut = getDayofYear(date2);            
             let sumOfDays = dayOfYearOut - dayOfYearIn;
 
             function getSumPrice(arr) {
@@ -76,7 +282,7 @@ $(document).ready(function () {
             };
 
             const dayOfYearInStr = String(dayOfYearIn);
-            const dayOfYearOutStr = String(dayOfYearOut);
+            const dayOfYearOutStr = String(dayOfYearOut);            
 
             if (keys.includes(dayOfYearInStr) && keys.includes(dayOfYearOutStr)) {
 

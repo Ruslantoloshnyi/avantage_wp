@@ -46,7 +46,7 @@
                             "label": "booking_calculation_slider_image_1",
                             "name": "booking_calculation_slider_image_1",
                             "type": "image",
-                            "instructions": "",
+                            "instructions": "Сюди введіть ціну для комфорта на двох",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -70,7 +70,7 @@
                             "label": "booking_calculation_slider_image_2",
                             "name": "booking_calculation_slider_image_2",
                             "type": "image",
-                            "instructions": "",
+                            "instructions": "Сюди введіть ціну для комфорта на трьох.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -94,7 +94,7 @@
                             "label": "booking_calculation_slider_image_3",
                             "name": "booking_calculation_slider_image_3",
                             "type": "image",
-                            "instructions": "",
+                            "instructions": "Сюди введіть ціну для люкса на двох.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -118,7 +118,7 @@
                             "label": "booking_calculation_slider_image_4",
                             "name": "booking_calculation_slider_image_4",
                             "type": "image",
-                            "instructions": "",
+                            "instructions": "люкс на трьох.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -142,7 +142,7 @@
                             "label": "booking_calculation_slider_image_5",
                             "name": "booking_calculation_slider_image_5",
                             "type": "image",
-                            "instructions": "",
+                            "instructions": "люкс на чотирьох.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -166,7 +166,7 @@
                             "label": "booking_calculation_slider_image_6",
                             "name": "booking_calculation_slider_image_6",
                             "type": "image",
-                            "instructions": "",
+                            "instructions": "двокімнатній люкс на чотирьох.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -362,7 +362,7 @@
                                     "label": "booking_table_subhead",
                                     "name": "booking_table_subhead",
                                     "type": "repeater",
-                                    "instructions": "",
+                                    "instructions": "Ціни з верху в низ по порядку : Комфорт на двох, комфорт на трьох, люкс на двох, люкс на трьох, люкс на чотирьох, двокімнатний люкс на чотирьох.",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -521,5 +521,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1676043606
+    "modified": 1676302751
 }
