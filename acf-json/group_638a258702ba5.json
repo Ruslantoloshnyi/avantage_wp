@@ -320,86 +320,6 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_638b6abdeb327",
-                            "label": "booking_table",
-                            "name": "booking_table",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "collapsed": "",
-                            "min": 0,
-                            "max": 0,
-                            "layout": "table",
-                            "button_label": "",
-                            "sub_fields": [
-                                {
-                                    "key": "field_638b6aceeb328",
-                                    "label": "booking_table_head",
-                                    "name": "booking_table_head",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_638b6b09eb329",
-                                    "label": "booking_table_subhead",
-                                    "name": "booking_table_subhead",
-                                    "type": "repeater",
-                                    "instructions": "Ціни з верху в низ по порядку : Комфорт на двох, комфорт на трьох, люкс на двох, люкс на трьох, люкс на чотирьох, двокімнатний люкс на чотирьох.",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "collapsed": "",
-                                    "min": 6,
-                                    "max": 6,
-                                    "layout": "table",
-                                    "button_label": "",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_638b6b35eb32a",
-                                            "label": "booking_table_price",
-                                            "name": "booking_table_price",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": ""
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
                             "key": "field_638c944bbd766",
                             "label": "booking_table_tel_1",
                             "name": "booking_table_tel_1",
@@ -509,7 +429,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "default"
+                "value": "template-booking-page.php"
             }
         ]
     ],
@@ -521,5 +441,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1676376444
+    "modified": 1676381332
 }

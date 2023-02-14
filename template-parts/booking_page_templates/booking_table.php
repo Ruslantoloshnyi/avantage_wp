@@ -2,9 +2,10 @@
 $tel_1 = get_sub_field('booking_table_tel_1');
 $tel_2 = get_sub_field('booking_table_tel_2');
 $arrPrice = [];
+$repeater_table_field = get_field('table', 'option');
 ?>
 
-<?php if (have_rows('booking_table')) : ?>
+<?php if ($repeater_table_field) : ?>
 
     <!-- Booking table section
     ================================================== -->
@@ -27,15 +28,15 @@ $arrPrice = [];
                             <th>Двокімнатний люкс<br>для чотирьох</th>
                         </tr>
 
-                        <?php while (have_rows('booking_table')) : the_row();
-                            $head = get_sub_field('booking_table_head');
+                        <?php while (have_rows('table', 'option')) : the_row();
+                            $head = get_sub_field('table_head');
 
                         ?>
                             <tr>
                                 <td class="booking-table-one"><?php echo $head; ?></td>
 
-                                <?php while (have_rows('booking_table_subhead')) : the_row();
-                                    $price = get_sub_field('booking_table_price');
+                                <?php while (have_rows('table_subhead', 'option')) : the_row();
+                                    $price = get_sub_field('table_price', 'option');
                                 ?>
                                     <?php array_push($arrPrice, $price); ?>
 
@@ -43,7 +44,6 @@ $arrPrice = [];
                                 <?php endwhile; ?>
                             </tr>
                         <?php endwhile; ?>
-
                     </table>
 
                 </div>
@@ -57,7 +57,7 @@ $arrPrice = [];
 <?php endif; ?>
 
 <script>
-<?php echo "var arrPrice=" . json_encode($arrPrice, JSON_FORCE_OBJECT); ?>
+    <?php echo "var arrPrice=" . json_encode($arrPrice, JSON_FORCE_OBJECT); ?>
 </script>
 
 <!-- Booking map section
