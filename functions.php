@@ -193,7 +193,7 @@ function style_avantage()
 {
 	wp_enqueue_style('bootstrap_css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
 	wp_enqueue_style('normalyze.css', get_template_directory_uri() . '/assets/css/normalyze.css');
-	wp_enqueue_style('style.css', get_template_directory_uri() . '/assets/css/style.css');	
+	wp_enqueue_style('style.css', get_template_directory_uri() . '/assets/css/style.css');
 	wp_enqueue_style('bootstrap4_css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css');
 	wp_enqueue_style('bootstrap-datepicker', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css');
 	wp_enqueue_style('ajax_css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
@@ -205,7 +205,7 @@ function script_avantage()
 	wp_enqueue_script('ajax.style', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js');
 	wp_enqueue_script('botstrap4.style', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js');
 	wp_enqueue_script('bootstrap-datepicker.style', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js');
-	wp_enqueue_script('script.js', get_template_directory_uri() . '/assets/js/script.js');		
+	wp_enqueue_script('script.js', get_template_directory_uri() . '/assets/js/script.js');
 }
 
 function theme_register_nav_menu()
@@ -227,18 +227,31 @@ function nav_link_filter($attr)
 }
 
 
-function true_id($args){
+function true_id($args)
+{
 	$args['post_page_id'] = 'ID';
 	return $args;
 }
-function true_custom($column, $id){
-	if($column === 'post_page_id'){
+function true_custom($column, $id)
+{
+	if ($column === 'post_page_id') {
 		echo $id;
 	}
 }
- 
+
 add_filter('manage_pages_columns', 'true_id', 5);
 add_action('manage_pages_custom_column', 'true_custom', 5, 2);
 add_filter('manage_posts_columns', 'true_id', 5);
 add_action('manage_posts_custom_column', 'true_custom', 5, 2);
 
+if (function_exists('acf_add_options_page')) {
+
+	acf_add_options_page(array(
+		'page_title'    => 'Global table',
+		'menu_title'    => 'Table',
+		'menu_slug'     => 'theme-general-settings',
+		'capability'    => 'edit_posts',
+		'redirect'      => false
+	));
+
+};

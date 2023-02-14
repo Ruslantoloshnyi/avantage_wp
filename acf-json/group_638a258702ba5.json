@@ -509,7 +509,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "template-booking-page.php"
+                "value": "default"
             }
         ]
     ],
@@ -521,5 +521,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1676302751
+    "modified": 1676376444
 }
