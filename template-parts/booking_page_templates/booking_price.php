@@ -2,9 +2,9 @@
 $head = get_sub_field('booking_price_head');
 $content_1 = get_sub_field('booking_price_content_1');
 $content_2 = get_sub_field('booking_price_content_2');
-$tel_1 = get_sub_field('booking_price_tel_1');
-$tel_2 = get_sub_field('booking_price_tel_2');
-$mail = get_sub_field('booking_price_mail');
+$tel_1 = get_field('tel_1' , 'option');
+$tel_2 = get_field('tel_2', 'option');
+$mail = get_field('email', 'option');
 
 ?>
 

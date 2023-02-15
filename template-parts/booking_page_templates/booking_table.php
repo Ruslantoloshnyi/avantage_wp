@@ -1,6 +1,6 @@
 <?php
-$tel_1 = get_sub_field('booking_table_tel_1');
-$tel_2 = get_sub_field('booking_table_tel_2');
+$tel_1 = get_field('tel_1' , 'option');
+$tel_2 = get_field('tel_2', 'option');
 $arrPrice = [];
 $repeater_table_field = get_field('table', 'option');
 ?>

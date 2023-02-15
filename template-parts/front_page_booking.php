@@ -1,8 +1,8 @@
 <?php
 $head = get_sub_field('front_page_booking_head');
-$tel1 = get_sub_field('front_page_booking_tel_1');
-$tel2 = get_sub_field('front_page_booking_tel_2');
-$mail = get_sub_field('front_page_booking_mail');
+$tel1 = get_field('tel_1', 'option');
+$tel2 = get_field('tel_2', 'option');
+$mail = get_field('email', 'option');
 $image1 = get_sub_field('front_page_booking_slider_image_1');
 $image2 = get_sub_field('front_page_booking_slider_image_2');
 $image3 = get_sub_field('front_page_booking_slider_image_3');
