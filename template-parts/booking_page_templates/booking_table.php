@@ -45,13 +45,9 @@ $repeater_table_field = get_field('table', 'option');
                             </tr>
                         <?php endwhile; ?>
                     </table>
-
                 </div>
-
             </div>
-
         </div>
-
     </section> <!-- Booking table section End -->
 
 <?php endif; ?>

@@ -16,7 +16,23 @@ $img3 = wp_get_attachment_image($image3, 'full', false, $attr);
 $img4 = wp_get_attachment_image($image4, 'full', false, $attr);
 $img5 = wp_get_attachment_image($image5, 'full', false, $attr);
 $img6 = wp_get_attachment_image($image6, 'full', false, $attr);
+
+$arrPrice = [];
+$repeater_table_field = get_field('table', 'option');
+
+if ($repeater_table_field) :
+    while (have_rows('table', 'option')) : the_row();
+        while (have_rows('table_subhead', 'option')) : the_row();
+            $price = get_sub_field('table_price', 'option');
+            array_push($arrPrice, $price);
+        endwhile;
+    endwhile;
+endif;
 ?>
+
+<script>
+    <?php echo "var arrPrice=" . json_encode($arrPrice, JSON_FORCE_OBJECT); ?>
+</script>
 
 <!-- Booking Section
    ================================================== -->
