@@ -241,84 +241,7 @@
                     "name": "zoom_room_booking_section",
                     "label": "zoom_room_booking_section",
                     "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_63878aba678ad",
-                            "label": "zoom_room_booking_price_1",
-                            "name": "zoom_room_booking_price_1",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_63878b67678ae",
-                            "label": "zoom_room_booking_price_2",
-                            "name": "zoom_room_booking_price_2",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_63878b6e678af",
-                            "label": "zoom_room_booking_price_3",
-                            "name": "zoom_room_booking_price_3",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_63878b75678b0",
-                            "label": "zoom_room_booking_price_4",
-                            "name": "zoom_room_booking_price_4",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ],
+                    "sub_fields": [],
                     "min": "",
                     "max": ""
                 }
@@ -345,5 +268,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1676478892
+    "modified": 1676638335
 }

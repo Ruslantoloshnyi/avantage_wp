@@ -21,6 +21,9 @@ $(function () {
     $('#datepicker-2').datepicker();
 });
 
+console.log(page_id);
+console.log(arrPrice);
+
 function getDayofYear(date) {
     let now = new Date(date);
     const start = new Date(now.getFullYear(), 0, 0);
@@ -350,7 +353,26 @@ $(document).ready(function () {
             const dayOfYearOutStr = String(dayOfYearOut);
 
             if (keys.includes(dayOfYearInStr) && keys.includes(dayOfYearOutStr)) {
-                price.textContent = getSumPrice(luxFourTwo);
+                
+                if (page_id == '242'){
+                    price.textContent = getSumPrice(luxTwo);
+                }
+                else if (page_id == '246'){
+                    price.textContent = getSumPrice(comfortTwo);
+                }
+                else if (page_id == '259'){
+                    price.textContent = getSumPrice(luxThree);
+                }
+                else if (page_id == '261'){
+                    price.textContent = getSumPrice(comfortThree);
+                }
+                else if (page_id == '265'){
+                    price.textContent = getSumPrice(luxFour);
+                }
+                else if (page_id == '267'){
+                    price.textContent = getSumPrice(luxFourTwo);
+                }
+                
                 nigts.textContent = '   ' + sumOfDays + '(ночей)';
             }
             else {

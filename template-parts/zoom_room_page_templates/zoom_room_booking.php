@@ -1,12 +1,72 @@
- <?php
-    $price_1 = get_sub_field('zoom_room_booking_price_1');
-    $price_2 = get_sub_field('zoom_room_booking_price_2');
-    $price_3 = get_sub_field('zoom_room_booking_price_3');
-    $price_4 = get_sub_field('zoom_room_booking_price_4');
+ <?php    
     $tel_1 = get_field('tel_1', 'option');
     $tel_2 = get_field('tel_2', 'option');
     $mail = get_field('email', 'option');
+
+    $arrPrice = [];
+    $repeater_table_field = get_field('table', 'option');
+
+    if ($repeater_table_field) :
+        while (have_rows('table', 'option')) : the_row();
+            while (have_rows('table_subhead', 'option')) : the_row();
+                $price = get_sub_field('table_price', 'option');
+                array_push($arrPrice, $price);
+            endwhile;
+        endwhile;
+    endif;
+
+    $page_id = get_the_ID();
+    
+    $price_1 = '';
+    $price_2 = '';
+    $price_3 = '';
+    $price_4 = '';
+
+    if ($page_id == '242'){
+        $price_1 = $arrPrice[2];
+        $price_2 = $arrPrice[8];
+        $price_3 = $arrPrice[14];
+        $price_4 = $arrPrice[20];        
+    }
+    elseif ($page_id == '256'){
+        $price_1 = $arrPrice[0];
+        $price_2 = $arrPrice[6];
+        $price_3 = $arrPrice[12];
+        $price_4 = $arrPrice[18]; 
+    }
+    elseif ($page_id == '259'){
+        $price_1 = $arrPrice[3];
+        $price_2 = $arrPrice[9];
+        $price_3 = $arrPrice[15];
+        $price_4 = $arrPrice[21];
+    }
+    elseif ($page_id == '261'){
+        $price_1 = $arrPrice[1];
+        $price_2 = $arrPrice[7];
+        $price_3 = $arrPrice[13];
+        $price_4 = $arrPrice[19];
+    }
+    elseif ($page_id == '265'){
+        $price_1 = $arrPrice[4];
+        $price_2 = $arrPrice[10];
+        $price_3 = $arrPrice[16];
+        $price_4 = $arrPrice[22];
+    }
+    elseif ($page_id == '267'){
+        $price_1 = $arrPrice[5];
+        $price_2 = $arrPrice[11];
+        $price_3 = $arrPrice[17];
+        $price_4 = $arrPrice[23];
+    }
     ?>
+
+<script>
+     <?php echo "var arrPrice=" . json_encode($arrPrice, JSON_FORCE_OBJECT); ?>    
+ </script>
+ <script>
+     <?php echo "var page_id=" . json_encode($page_id);?>
+ </script>
+ 
  <!-- Booking Section
    ================================================== -->
 
