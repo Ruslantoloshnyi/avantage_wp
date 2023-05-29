@@ -16,6 +16,7 @@
     endif;
 
     $page_id = get_the_ID();
+    echo $page_id;
     
     $price_1 = '';
     $price_2 = '';
@@ -64,7 +65,7 @@
      <?php echo "var arrPrice=" . json_encode($arrPrice, JSON_FORCE_OBJECT); ?>    
  </script>
  <script>
-     <?php echo "var page_id=" . json_encode($page_id);?>
+     <?php echo "var page_id=" . json_encode($page_id, );?>
  </script>
  
  <!-- Booking Section

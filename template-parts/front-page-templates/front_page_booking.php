@@ -1,24 +1,17 @@
 <?php
-$head = get_sub_field('front_page_booking_head');
+$field = get_field('front_page_booking');
+
 $tel1 = get_field('tel_1', 'option');
 $tel2 = get_field('tel_2', 'option');
 $mail = get_field('email', 'option');
-$image1 = get_sub_field('front_page_booking_slider_image_1');
-$image2 = get_sub_field('front_page_booking_slider_image_2');
-$image3 = get_sub_field('front_page_booking_slider_image_3');
-$image4 = get_sub_field('front_page_booking_slider_image_4');
-$image5 = get_sub_field('front_page_booking_slider_image_5');
-$image6 = get_sub_field('front_page_booking_slider_image_6');
+
 $attr = ['class' => 'd-block w-100', 'alt' => '...'];
-$img1 = wp_get_attachment_image($image1, 'full', false, $attr);
-$img2 = wp_get_attachment_image($image2, 'full', false, $attr);
-$img3 = wp_get_attachment_image($image3, 'full', false, $attr);
-$img4 = wp_get_attachment_image($image4, 'full', false, $attr);
-$img5 = wp_get_attachment_image($image5, 'full', false, $attr);
-$img6 = wp_get_attachment_image($image6, 'full', false, $attr);
+
 
 $arrPrice = [];
 $repeater_table_field = get_field('table', 'option');
+$page_id = get_the_ID();
+
 
 if ($repeater_table_field) :
     while (have_rows('table', 'option')) : the_row();
@@ -31,7 +24,7 @@ endif;
 ?>
 
 <script>
-    <?php echo "var arrPrice=" . json_encode($arrPrice, JSON_FORCE_OBJECT); ?>
+    <?php echo "var arrPrice=" . json_encode($arrPrice, JSON_FORCE_OBJECT); ?>    
 </script>
 
 <!-- Booking Section
@@ -59,22 +52,22 @@ endif;
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="100000">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-key="1">
-                            <?php echo $img1; ?>
+                            <?php echo  wp_get_attachment_image($field['front_page_slider_image_1'], 'full', false, $attr); ?>
                         </div>
                         <div class="carousel-item" data-key="2">
-                            <?php echo $img2; ?>
+                            <?php echo wp_get_attachment_image($field['front_page_slider_image_2'], 'full', false, $attr); ?>
                         </div>
                         <div class="carousel-item" data-key="3">
-                            <?php echo $img3; ?>
+                            <?php echo wp_get_attachment_image($field['front_page_slider_image_3'], 'full', false, $attr); ?>
                         </div>
                         <div class="carousel-item" data-key="4">
-                            <?php echo $img4; ?>
+                            <?php echo wp_get_attachment_image($field['front_page_slider_image_4'], 'full', false, $attr); ?>
                         </div>
                         <div class="carousel-item" data-key="5">
-                            <?php echo $img5; ?>
+                            <?php echo wp_get_attachment_image($field['front_page_slider_image_5'], 'full', false, $attr); ?>
                         </div>
                         <div class="carousel-item" data-key="6">
-                            <?php echo $img6; ?>
+                            <?php echo wp_get_attachment_image($field['front_page_slider_image_6'], 'full', false, $attr); ?>
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
