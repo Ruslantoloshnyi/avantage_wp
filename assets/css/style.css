@@ -379,6 +379,20 @@ span.booking-text-content {
 }
 
 /*Rooms*/
+.rooms-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+@media (max-width: 1023px) {
+    .rooms-row {
+        display: flex;
+        flex-direction: column;        
+        margin-top: 50px;
+    }
+}
 
 .rooms-card-image {
     padding-top: 10px;
@@ -388,7 +402,6 @@ span.booking-text-content {
 .header-rooms {
     background-image: url('../image/rooms-bg.jpg');
     height: 100vh;
-
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -409,12 +422,19 @@ span.booking-text-content {
     border-radius: 32px 32px 32px 32px;
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.15);
     margin-bottom: 60px;
+    width: 48%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 1023px) {
+    .rooms-card {      
+        width: 100%;
+    }
 }
 
 .rooms-card-head {
     text-align: left;
-    padding-top: 10px;
-    font-family: 'Montserrat';
+    padding-top: 10px;   
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
@@ -439,18 +459,32 @@ span.booking-text-content {
 .rooms-content {
     padding-top: 10px;
     text-align: left;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;    
     font-size: 18px;
     line-height: 22px;
     color: #4A4646;
+}
+
+@media (max-width: 500px) {
+    .rooms-content {
+font-size: 16px;
+    }
 }
 
 .card-footer {
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 424px) {
+    .card-footer {
+        display: flex;        
+        flex-direction: column-reverse;        
+    }
 }
 
 .rooms-button {
@@ -461,7 +495,7 @@ span.booking-text-content {
     padding-right: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-family: 'Montserrat';
+   
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
@@ -469,14 +503,30 @@ span.booking-text-content {
     color: #4A4646;
 }
 
+@media (max-width: 500px) {
+    .rooms-button {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        font-size: 16px;
+    }   
+}
+
 .card-price {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat' sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 200;
     font-size: 22px;
     line-height: 27px;
     text-align: right;
     color: #4A4646;
+}
+
+@media (max-width: 500px) {
+    .card-price {
+        font-size: 16px;
+    }
 }
 
 /*zoom-room*/

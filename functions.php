@@ -253,5 +253,47 @@ if (function_exists('acf_add_options_page')) {
 		'capability'    => 'edit_posts',
 		'redirect'      => false
 	));
-
 };
+
+// add custom post type
+function create_rooms_post_type()
+{
+	$args = array(
+		'public' => true,
+		'show_in_rest' => true,
+		'label'  => 'Номери',
+		'supports' => array('title', 'editor', 'thumbnail',),
+		'taxonomies' => array('mark'),
+		'has_archive' => true
+
+	);
+	register_post_type('room', $args);
+}
+add_action('init', 'create_rooms_post_type');
+
+function create_category_taxonomy()
+{
+	$labels = array(
+		'name'              => 'Category',
+		'singular_name'     => 'catagory',
+		'search_items'      => 'Search category',
+		'all_items'         => 'All categories',
+		'edit_item'         => 'Edit category',
+		'update_item'       => 'Update category',
+		'add_new_item'      => 'Add new category',
+		'new_item_name'     => 'new category name',
+		'menu_name'         => 'Категорія'
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array('slug' => 'Категорія')
+	);
+
+	register_taxonomy('category', 'room', $args);
+}
+add_action('init', 'create_category_taxonomy');
