@@ -468,7 +468,7 @@ span.booking-text-content {
 
 @media (max-width: 500px) {
     .rooms-content {
-font-size: 16px;
+       font-size: 16px;
     }
 }
 

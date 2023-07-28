@@ -3,9 +3,9 @@
     "title": "room_page",
     "fields": [
         {
-            "key": "field_64b3fc411edca",
-            "label": "room page content",
-            "name": "room_page_content",
+            "key": "field_64c3e1ed71978",
+            "label": "single room pic",
+            "name": "single_room_pic",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -16,34 +16,15 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": 1,
-            "max": 3,
+            "min": 4,
+            "max": 8,
             "layout": "table",
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_64b5560a6d3a0",
-                    "label": "room page content first head",
-                    "name": "room_page_content_first_head",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_64b556236d3a1",
-                    "label": "room page content first image",
-                    "name": "room_page_content_first_image",
+                    "key": "field_64c3e2bd755fc",
+                    "label": "single room pic img",
+                    "name": "single_room_pic_img",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -63,177 +44,6 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
-                },
-                {
-                    "key": "field_64b556646d3a2",
-                    "label": "room page content first text",
-                    "name": "room_page_content_first_text",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
-                },
-                {
-                    "key": "field_64b5567f6d3a3",
-                    "label": "room page content first pic",
-                    "name": "room_page_content_first_pic",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": 4,
-                    "max": 8,
-                    "layout": "table",
-                    "button_label": "",
-                    "sub_fields": [
-                        {
-                            "key": "field_64b556936d3a4",
-                            "label": "room page first pic",
-                            "name": "room_page_first_pic",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "id",
-                            "preview_size": "full",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        }
-                    ]
-                },
-                {
-                    "key": "field_64b55b3adc579",
-                    "label": "room page content second head",
-                    "name": "room_page_content_second_head",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_64b55b4fdc57a",
-                    "label": "room page content second image",
-                    "name": "room_page_content_second_image",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "id",
-                    "preview_size": "full",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ""
-                },
-                {
-                    "key": "field_64b55b68dc57b",
-                    "label": "room page content second text",
-                    "name": "room_page_content_second_text",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
-                },
-                {
-                    "key": "field_64b55b84dc57c",
-                    "label": "room page content second pic",
-                    "name": "room_page_content_second_pic",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "collapsed": "",
-                    "min": 4,
-                    "max": 8,
-                    "layout": "table",
-                    "button_label": "",
-                    "sub_fields": [
-                        {
-                            "key": "field_64b55b98dc57d",
-                            "label": "room page second pic",
-                            "name": "room_page_second_pic",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "id",
-                            "preview_size": "full",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        }
-                    ]
                 }
             ]
         }
@@ -241,9 +51,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "templates\/template-room-page.php"
+                "value": "room"
             }
         ]
     ],
@@ -255,5 +65,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1689607590
+    "modified": 1690561007
 }

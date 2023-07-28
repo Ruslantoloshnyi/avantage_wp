@@ -297,3 +297,9 @@ function create_category_taxonomy()
 	register_taxonomy('category', 'room', $args);
 }
 add_action('init', 'create_category_taxonomy');
+
+add_filter('excerpt_more', fn () => ' ...');
+
+add_filter('excerpt_length', function () {
+	return 25;
+});
