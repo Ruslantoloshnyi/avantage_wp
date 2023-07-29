@@ -1,3 +1,353 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+  }
+  
+  /* Sections
+     ========================================================================== */
+  
+  /**
+   * Remove the margin in all browsers.
+   */
+  
+  body {
+    margin: 0;
+  }
+  
+  /**
+   * Render the `main` element consistently in IE.
+   */
+  
+  main {
+    display: block;
+  }
+  
+  /**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+  
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+  /* Grouping content
+     ========================================================================== */
+  
+  /**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+  
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  /* Text-level semantics
+     ========================================================================== */
+  
+  /**
+   * Remove the gray background on active links in IE 10.
+   */
+  
+  a {
+    background-color: transparent;
+  }
+  
+  /**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+  
+  abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+  }
+  
+  /**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+  
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  /**
+   * Add the correct font size in all browsers.
+   */
+  
+  small {
+    font-size: 80%;
+  }
+  
+  /**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+  
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+  
+  /* Embedded content
+     ========================================================================== */
+  
+  /**
+   * Remove the border on images inside links in IE 10.
+   */
+  
+  img {
+    border-style: none;
+  }
+  
+  /* Forms
+     ========================================================================== */
+  
+  /**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+  
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+  }
+  
+  /**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+  
+  button,
+  input { /* 1 */
+    overflow: visible;
+  }
+  
+  /**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+  
+  button,
+  select { /* 1 */
+    text-transform: none;
+  }
+  
+  /**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+  
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+  
+  /**
+   * Remove the inner border and padding in Firefox.
+   */
+  
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  
+  /**
+   * Restore the focus styles unset by the previous rule.
+   */
+  
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  
+  /**
+   * Correct the padding in Firefox.
+   */
+  
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+  
+  /**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+  
+  legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+  }
+  
+  /**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+  
+  progress {
+    vertical-align: baseline;
+  }
+  
+  /**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+  
+  textarea {
+    overflow: auto;
+  }
+  
+  /**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+  
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+  }
+  
+  /**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+  
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+  
+  /**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+  
+  [type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+  }
+  
+  /**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+  
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  
+  /**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+  
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+  }
+  
+  /* Interactive
+     ========================================================================== */
+  
+  /*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+  
+  details {
+    display: block;
+  }
+  
+  /*
+   * Add the correct display in all browsers.
+   */
+  
+  summary {
+    display: list-item;
+  }
+  
+  /* Misc
+     ========================================================================== */
+  
+  /**
+   * Add the correct display in IE 10+.
+   */
+  
+  template {
+    display: none;
+  }
+  
+  /**
+   * Add the correct display in IE 10.
+   */
+  
+  [hidden] {
+    display: none;
+  }
+
 /*Homepage header*/
 
 .header {
@@ -30,7 +380,7 @@
 }
 
 .nav-item a {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -40,7 +390,7 @@
 
 
 .title-head h1 {
-    font-family: 'Merriweather';
+    font-family: 'Merriweather', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 56px;
@@ -49,7 +399,7 @@
 }
 
 .title-content {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
@@ -58,7 +408,7 @@
 }
 
 .title-foot {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
@@ -77,7 +427,7 @@
 
 .title-href a {
     outline: #1ABC9C;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
@@ -86,10 +436,7 @@
     color: #ffff;
 }
 
-
-
 /*Homepage info section*/
-
 .info {
     margin-top: 50px;
 }
@@ -107,7 +454,7 @@
 }
 
 .info-title {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 28px;
@@ -116,7 +463,7 @@
 }
 
 .info-content {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -127,7 +474,7 @@
 /*Homepage Grid section*/
 
 .grid h1 {
-    font-family: 'Merriweather';
+    font-family: 'Merriweather', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -246,7 +593,7 @@
 /*Booking section*/
 
 .booking h1 {
-    font-family: 'Merriweather';
+    font-family: 'Merriweather', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -256,7 +603,7 @@
 }
 
 .booking p {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -265,7 +612,7 @@
 }
 
 .booking span {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -276,7 +623,7 @@
 
 
 .booking-span-title {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
@@ -294,7 +641,7 @@ span.booking-span-price {
 }
 
 span.booking-text-content {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -322,7 +669,7 @@ span.booking-text-content {
 }
 
 .footer-nav a {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -409,7 +756,7 @@ span.booking-text-content {
 .rooms-title {
     margin-top: 150px;
     text-align: center;
-    font-family: 'Merriweather';
+    font-family: 'Merriweather', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 38px;
@@ -477,7 +824,7 @@ span.booking-text-content {
     justify-content: space-between;
     margin-top: 25px;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 15px;    
 }
 
 @media (max-width: 424px) {
@@ -494,13 +841,13 @@ span.booking-text-content {
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 10px;
-    padding-bottom: 10px;
-   
+    padding-bottom: 10px;    
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
     line-height: 27px;
     color: #4A4646;
+    text-decoration: none !important;
 }
 
 @media (max-width: 500px) {
@@ -547,7 +894,7 @@ span.booking-text-content {
 }
 
 .zoom-room-pic {
-    justify-content: center;
+    /* justify-content: center; */
     height: 75px;
     display: flex;
 }
@@ -558,31 +905,102 @@ span.booking-text-content {
 
 .zoom-room-pic-text {
     text-align: center;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 24px;
-    text-align: center;
+    line-height: 24px;   
     color: #000000;
 }
 
 .zoom-room-head-section {
     padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+    .zoom-room-head-section {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+.zoom-room-head-left {
+   width: 35%;   
+}
+
+@media(max-width: 1000px) {
+    .zoom-room-head-left {
+        width: 100%;
+    }
+}
+
+.zoom-room-head-right {
+    width: 65%;
+}
+
+@media(max-width: 1000px) {
+    .zoom-room-head-right {
+        width: 100%;
+    }
+}
+
+.zoom-room-head-discription {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-bottom: 10px;
+}
+
+@media (max-width: 1000px) {
+    .zoom-room-head-discription {
+        width: 33%;
+    }
+}
+
+@media (max-width: 550px) {
+    .zoom-room-head-discription {
+        width: 50%;
+    }
+}
+
+.zoom-room-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.zoom-room-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .zoom-room-info-content {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
     line-height: 27px;
-    color: #000000;
+    color: #000000;    
+}
+
+@media (max-width: 767px) {
+    .zoom-room-info-content {
+        font-size: 18px;
+    }
 }
 
 .container-slyder {
     margin-left: 289px;
     margin-right: 289px;
+}
+
+.zoom-slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .zoom-room-slyder-section {
@@ -594,7 +1012,7 @@ span.booking-text-content {
 }
 
 .booking-zoom-room p {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -603,7 +1021,7 @@ span.booking-text-content {
 }
 
 .booking-zoom-room span {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -613,7 +1031,7 @@ span.booking-text-content {
 
 
 .zoom-room-booking-text-head p .zoom-room-booking-span-text {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
@@ -622,7 +1040,7 @@ span.booking-text-content {
 }
 
 .zoom-room-booking-text-one p {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -640,7 +1058,7 @@ span.booking-text-content {
 }
 
 .calendar-head p {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
@@ -657,22 +1075,33 @@ span.booking-text-content {
 .zoom-room-table-one {
     border-right: 1px solid #1ABC9C;
     color: #1ABC9C;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 39px;
 }
 
+@media (max-width: 400px) {
+    .zoom-room-table-one{
+        font-size: 18px;
+    }
+}
+
 .zoom-room-table-two {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 34px;
     padding-left: 20px;
     color: #000000;
+}
 
+@media (max-width: 400px) {
+    .zoom-room-table-two{
+        font-size: 16px;
+    }
 }
 
 .zoom-room-table td {
@@ -682,7 +1111,7 @@ span.booking-text-content {
 /*Booking*/
 
 .booking-title {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
@@ -693,7 +1122,7 @@ span.booking-text-content {
 }
 
 .booking-head {
-    font-family: 'Merriweather';
+    font-family: 'Merriweather', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 36px;
@@ -705,7 +1134,7 @@ span.booking-text-content {
 }
 
 .booking-price-content {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -714,7 +1143,7 @@ span.booking-text-content {
 }
 
 .booking-price-content span {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -735,7 +1164,7 @@ span.booking-text-content {
 }
 
 .booking-table th {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -749,7 +1178,7 @@ span.booking-text-content {
 .booking-table td {
     border-bottom: 1px solid #1ABC9C;
     border-right: 1px solid #1ABC9C;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
@@ -760,7 +1189,7 @@ span.booking-text-content {
 }
 
 .booking-table td.booking-table-one {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
@@ -785,7 +1214,7 @@ span.booking-text-content {
 }
 
 .booking-map-text {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;

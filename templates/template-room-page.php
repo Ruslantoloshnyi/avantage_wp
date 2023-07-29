@@ -47,7 +47,7 @@ $query = new WP_Query($args);
                             </div>
                             <div class="rooms-content"><?php the_excerpt(); ?></div>
                             <div class="card-footer">
-                                <button type="button" class="rooms-button">Детальніше</button>
+                                <a href="<?php echo get_permalink(); ?>" class="rooms-button">Детальніше</a>
                                 <div class="card-price">Ціна від 850 грн</div>
                             </div>
                         </div>

@@ -46,6 +46,226 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_64c4199783382",
+            "label": "single room image",
+            "name": "single_room_image",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 4,
+            "max": 8,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_64c419fbc7574",
+                    "label": "room img",
+                    "name": "room_img",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "full",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_64c41a23c7575",
+                    "label": "room text",
+                    "name": "room_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_64c4f4d168d59",
+            "label": "single slider image 1",
+            "name": "single_slider_image_1",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_64c4f4fc68d5a",
+            "label": "single slider image 2",
+            "name": "single_slider_image_2",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_64c4f51568d5b",
+            "label": "single slider image 3",
+            "name": "single_slider_image_3",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_64c506902dca5",
+            "label": "single price 1",
+            "name": "single_price_1",
+            "type": "number",
+            "instructions": "Ціна Червень 1-15",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "Червень 1-15",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 4000,
+            "step": 50
+        },
+        {
+            "key": "field_64c5075b2dca6",
+            "label": "single price 2",
+            "name": "single_price_2",
+            "type": "number",
+            "instructions": "Ціна Червень 15-26",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "Червень 15-26",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 4000,
+            "step": 50
+        },
+        {
+            "key": "field_64c5079a2dca7",
+            "label": "single price 3",
+            "name": "single_price_3",
+            "type": "number",
+            "instructions": "Ціна Липень-Серпень",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "Липень-Серпень",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 4000,
+            "step": 50
+        },
+        {
+            "key": "field_64c507de2dca8",
+            "label": "single price 4",
+            "name": "single_price_4",
+            "type": "number",
+            "instructions": "Ціна Вересень",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "Вересень",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 4000,
+            "step": 50
         }
     ],
     "location": [
@@ -65,5 +285,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1690561007
+    "modified": 1690634346
 }
