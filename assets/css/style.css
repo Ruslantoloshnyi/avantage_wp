@@ -461,6 +461,11 @@
     line-height: 34px;
     color: #1ABC9C;
 }
+@media(max-width: 450px) {
+    .info-title{
+        font-size: 22px;
+    }
+}
 
 .info-content {
     font-family: 'Montserrat', sans-serif;
@@ -469,6 +474,11 @@
     font-size: 18px;
     line-height: 22px;
     color: #4A4646;
+}
+@media(max-width: 450px) {
+    .info-content{
+        font-size: 14px;
+    }
 }
 
 /*Homepage Grid section*/
@@ -652,11 +662,122 @@ span.booking-text-content {
 
 /*footer*/
 
-.footer-section {
+footer {
     background-color: #1ABC9C;
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
+    font-family: sans-serif;
+}
+
+.footer_content {
+    display: flex;
+}
+
+@media (max-width: 500px) {
+    .footer_content {
+        display: flex;
+        flex-direction: column;        
+    }
+}
+
+.footer_content__menu {
+    width: 50%;
+}
+
+@media(max-width: 500px) {
+    .footer_content__menu {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.footer_content_data {
+    width: 50%;
+    margin-top: 64px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+@media(max-width: 500px) {
+    .footer_content_data {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media(max-width: 350px) {
+    .footer_content_data {
+        font-size: 16px;
+    }
+}
+
+.footer_content_data__contacts {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 40px;           
+}
+
+@media (max-width: 1023px) {
+    .footer_content_data__contacts {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.footer_content_data__adress {
+    display: flex;
+    justify-content: space-between;     
+}
+
+@media (max-width: 1023px) {
+    .footer_content_data__adress {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.footer_content_data__social {
+    margin-top: 40px;
+    display: flex;   
+}
+
+.footer_content_data__social a {
+    margin-right: 30px;
+}
+
+@media(max-width: 500px) {
+    .footer_content_data__social {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.footer-copyright {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+@media(max-width: 500px) {
+    .footer-copyright {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+.footer_contact_data__cont {
+    padding-right: 32px;
 }
 
 .footer-menu ul {
@@ -665,7 +786,6 @@ span.booking-text-content {
     padding-left: 0;
     display: flex;
     flex-direction: column;
-
 }
 
 .footer-nav a {
@@ -683,46 +803,7 @@ span.booking-text-content {
 }
 
 .footer-nav li {
-    padding-top: 64px;
-}
-
-.footer-adress {
-    display: flex;
-    padding-top: 64px;
-}
-
-.footer-head {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    color: #ffffff;
-}
-
-.footer-content {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    text-decoration-line: underline;
-
-    color: #FFFFFF;
-
-}
-
-.footer-content-two {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    color: #FFFFFF;
-}
-
-.footer-dist {
-    padding-top: 105px;
+    padding-top: 50px;
 }
 
 /*Rooms*/

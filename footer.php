@@ -1,69 +1,48 @@
 <?php
-
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package Avantage
- */
-
-?>
-<?php
 $tel_1 = get_field('tel_1', 'option');
 $tel_2 = get_field('tel_2', 'option');
 $mail = get_field('email', 'option');
 ?>
-<!-- footer
-   ================================================== -->
 
 <footer>
-
-	<section class="footer-section">
-
-		<div class="container">
-
-			<div class="row">
-				<div class="col-6">
-					<div class="footer-menu">
-						<?php
-						wp_nav_menu([
-							'theme_location'  => 'footer',
-							'menu_class'      => 'footer-nav',
-						]);
-						?>
-					</div>
-
-				</div>
-
-				<div class="col-6">
-					<div class="row footer-adress">
-						<div class="col-12 col-md-6 footer-head">
-							<p>Адреса:</p>
-						</div>
-						<div class="col-12 col-md-6 footer-content">
-							<p>вулиця Шкільна, 59Б, Залізний Порт,<br> Херсонська область, 75653</p>
-						</div>
-
-						<div class="col-12 col-md-6 footer-head ">
-							<p>Контакти: </p>
-						</div>
-						<div class="col-12 col-md-6 footer-content-two">
-							<p><?php echo $tel_1; ?>; <?php echo $tel_2; ?></p>
-							<p><?php echo $mail; ?></p>
-						</div>
-
-					</div>
+	<div class="container">
+		<div class="footer_content">
+			<div class="footer_content__menu">
+				<div class="footer-menu">
+					<?php
+					wp_nav_menu([
+						'theme_location'  => 'footer',
+						'menu_class'      => 'footer-nav',
+					]);
+					?>
 				</div>
 			</div>
-
-
+			<div class="footer_content_data">
+				<div class="footer_content_data__adress">
+					<div>Адреса:</div>
+					<div>
+						<div>вулиця Шкільна, 59Б, Залізний Порт,</div>
+						<div>Херсонська область, 75653</div>
+					</div>
+				</div>
+				<div class="footer_content_data__contacts">
+					<div>Контакти:</div>
+					<div class="footer_contact_data__cont">
+						<div><?php echo $tel_1 . ';' . ' ' . $tel_2; ?></div>
+						<div><?php echo $mail; ?></div>
+					</div>
+				</div>
+				<div class="footer_content_data__social">
+					<a href="https://www.facebook.com/profile.php?id=100069532664457"><img src="<?php echo get_template_directory_uri() . '/assets/image/facebook.png'; ?>" alt=""></a>
+					<a href="https://instagram.com/avantagehotel?igshid=MzRlODBiNWFlZA=="><img src="<?php echo get_template_directory_uri() . '/assets/image/instagram.png'; ?>" alt=""></a>
+				</div>
+			</div>
 		</div>
-
-	</section>
-
+		<div class="footer-copyright">
+			<div class="footer-copyright__autor">Copiright &#169; 2022 Ruslan Toloshnyi</div>
+			<div class="footer-copyright__email">ruslantoloshnyi@gmail.com</div>
+		</div>
+	</div>
 </footer>
 
 <?php wp_footer(); ?>
