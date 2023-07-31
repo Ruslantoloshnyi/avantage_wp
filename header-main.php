@@ -14,7 +14,7 @@
  */
 ?>
 
-<?php 
+<?php
 $id = '14';
 $id_room = get_permalink($id);
 ?>
@@ -37,9 +37,10 @@ $id_room = get_permalink($id);
     ?>
 </head>
 
-    <!-- Header
+<!-- Header
     ================================================== -->
-    <header class="header">
+<header class="header">
+    <div class="container">
 
         <nav class="navbar navbar-expand-md navbar-light bg-avantage">
             <div class="container-fluid">
@@ -48,8 +49,8 @@ $id_room = get_permalink($id);
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <?php wp_nav_menu([                        
-                        'menu_class'      => 'navbar-nav',                       
+                    <?php wp_nav_menu([
+                        'menu_class'      => 'navbar-nav',
                     ]);
                     ?>
                 </div>
@@ -75,13 +76,13 @@ $id_room = get_permalink($id);
                     </div>
 
                     <a href="<?php echo $id_room; ?>"><button type="button" style="background-color: #1ABC9C" class="btn btn-primary title-href">Обрати
-                        номер
-                    </button></a>
+                            номер
+                        </button></a>
 
                 </div>
 
             </section>
 
         </div>
-
-    </header> <!-- Header End -->
+    </div>
+</header> <!-- Header End -->

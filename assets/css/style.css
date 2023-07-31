@@ -376,7 +376,8 @@
 }
 
 .bg-avantage {
-    background-color: #1ABC9C;
+    /* background-color: #1ABC9C; */
+    color: #1ABC9C;
 }
 
 .nav-item a {
@@ -386,6 +387,11 @@
     font-size: 20px;
     line-height: 24px;
     color: #4A4646;
+}
+@media(max-width: 400px) {
+    .nav-item a {
+        font-size: 16px;
+    }
 }
 
 
@@ -397,6 +403,17 @@
     line-height: 70px;
     color: #ffff;
 }
+@media(max-width: 990px) {
+    .title-head h1 {
+        font-size: 36px;
+    }
+}
+
+@media(max-width: 374px) {
+    .title-head h1 {
+        font-size: 24px;
+    }
+}
 
 .title-content {
     font-family: 'Montserrat', sans-serif;
@@ -405,6 +422,17 @@
     font-size: 22px;
     line-height: 27px;
     color: #4A4646;
+}
+@media(max-width: 990px) {
+    .title-content {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 400px) {
+    .title-content {
+        font-size: 14px;
+    }
 }
 
 .title-foot {
@@ -415,9 +443,17 @@
     line-height: 27px;
     color: #4A4646;
 }
+@media(max-width: 990px) {
+    .title-foot {
+        font-size: 18px;
+    }
+}
 
-
-
+@media(max-width: 400px) {
+    .title-foot {
+        font-size: 14px;
+    }
+}
 
 .title-href {
     margin-top: 50px;
