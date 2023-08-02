@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme
  *
@@ -45,10 +46,10 @@
     ?>
 </head>
 
-    <!-- Header
+<!-- Header
     ================================================== -->
-    <header class="header-rooms">
-
+<header class="header-rooms">
+    <div class="container">
         <nav class="navbar navbar-expand-md navbar-light bg-avantage">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"></a>
@@ -56,16 +57,15 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <?php wp_nav_menu([                        
-                        'menu_class'      => 'navbar-nav',                       
+                    <?php wp_nav_menu([
+                        'menu_class'      => 'navbar-nav',
                     ]);
                     ?>
                 </div>
             </div>
         </nav>
-
         <div class="rooms-title">
             <h1>Номери</h1>
         </div>
-
-    </header>
+    </div>
+</header>
