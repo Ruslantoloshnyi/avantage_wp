@@ -157,7 +157,7 @@ while (have_posts()) :
                 <div class="col-md-6 col-12">
                     <div class="zoom-room-booking-text">
                         <div class="zoom-room-booking-text-head">
-                            <p><span class="booking-span-title">Всього:</span> <span id="price" class=""></span><span id="nights"></span></p>
+                            <p><span class="booking-span-title">Всього: </span> <span id="price" class=""></span><span id="nights"></span></p>
                         </div>
                         <div class="zoom-room-booking-text-one">
                             <p>Бронювання здійснюється за телефоном або електронною поштою.</p>

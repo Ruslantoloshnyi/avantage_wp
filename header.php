@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme
  *
@@ -38,17 +39,14 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Merriweather?query=Merriweather">
-
-
-
     <? wp_head();
     ?>
 </head>
 
-    <!-- Header
+<!-- Header
     ================================================== -->
-    <header class="">
-
+<header>
+    <div class="container">
         <nav class="navbar navbar-expand-md navbar-light bg-avantage">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"></a>
@@ -56,13 +54,12 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <?php wp_nav_menu([                        
-                        'menu_class'      => 'navbar-nav',                       
+                    <?php wp_nav_menu([
+                        'menu_class'      => 'navbar-nav',
                     ]);
                     ?>
                 </div>
             </div>
         </nav>
-    </header>
-
-
+    </div>
+</header>

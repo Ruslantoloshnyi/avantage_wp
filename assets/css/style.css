@@ -1049,14 +1049,29 @@ footer {
     box-shadow: 0px 4px 29px rgba(0, 0, 0, 0.1);
 }
 
-.zoom-room-head {
-    font-family: 'Merriweather';
+.zoom-room-head h1 {
+    font-family: 'Merriweather', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 38px;
     line-height: 48px;
     color: #4A4646;
     text-align: center;
+    width: 95%;
+}
+@media(max-width: 1200px) {
+    .zoom-room-head h1 {
+        font-size: 28px;
+    }
+}
+
+.zoom-room-head p {
+    font-family: 'Merriweather', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 22px;
+    line-height: 48px;
+    color: #4A4646;
 }
 
 .zoom-room-pic {
@@ -1083,6 +1098,11 @@ footer {
     padding-top: 60px;
     display: flex;
     justify-content: space-between;
+}
+@media(max-width: 767px) {
+    .zoom-room-head-section {
+        padding-top: 5px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -1177,6 +1197,20 @@ footer {
     margin-top: 78px;
 }
 
+.booking-zoom-room span {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #1ABC9C;
+}
+@media(max-width: 767px) {
+    .booking-zoom-room span {
+        font-size: 18px;
+    }
+}
+
 .booking-zoom-room p {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -1185,14 +1219,10 @@ footer {
     line-height: 27px;
     color: #4A4646;
 }
-
-.booking-zoom-room span {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 27px;
-    color: #1ABC9C;
+@media(max-width: 767px) {
+    .booking-zoom-room p {
+        font-size: 18px;
+    }
 }
 
 
@@ -1217,6 +1247,11 @@ footer {
 .zoom-room-booking-text {
     margin-left: 90px;
     margin-right: 38px;
+}
+@media(max-width: 400px) {
+    .zoom-room-booking-text {
+        margin-left: 10px;
+    }
 }
 
 .container-calendar {
