@@ -145,8 +145,19 @@ function avantage_scripts()
 {
 	wp_enqueue_style('avantage-style', get_stylesheet_uri(), array(), _S_VERSION);
 	wp_style_add_data('avantage-style', 'rtl', 'replace');
+	wp_enqueue_style('bootstrap_css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
+	wp_enqueue_style('normalyze.css', get_template_directory_uri() . '/assets/css/normalyze.css');
+	wp_enqueue_style('style.css', get_template_directory_uri() . '/assets/css/style.css');
+	wp_enqueue_style('bootstrap4_css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css');
+	wp_enqueue_style('bootstrap-datepicker', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css');
+	wp_enqueue_style('ajax_css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 	wp_enqueue_script('avantage-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+	wp_enqueue_script('ajax.style', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js');
+	wp_enqueue_script('bootstrap.style', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js');
+	wp_enqueue_script('botstrap4.style', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js');
+	wp_enqueue_script('bootstrap-datepicker.style', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js');
+
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
@@ -181,32 +192,15 @@ if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-add_action('wp_enqueue_scripts', 'style_avantage');
-add_action('wp_footer', 'script_avantage');
 add_action('after_setup_theme', 'theme_register_nav_menu');
 
 
 add_filter('nav_menu_css_class', 'wp_kama_nav_menu_css_class_filter', 10, 4);
 add_filter('nav_menu_link_attributes', 'nav_link_filter', 10, 4);
 
-function style_avantage()
-{
-	wp_enqueue_style('bootstrap_css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css');
-	wp_enqueue_style('normalyze.css', get_template_directory_uri() . '/assets/css/normalyze.css');
-	wp_enqueue_style('style.css', get_template_directory_uri() . '/assets/css/style.css');
-	wp_enqueue_style('bootstrap4_css', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css');
-	wp_enqueue_style('bootstrap-datepicker', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css');
-	wp_enqueue_style('ajax_css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-}
 
-function script_avantage()
-{
-	wp_enqueue_script('bootstrap.style', 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js');
-	wp_enqueue_script('ajax.style', 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js');
-	wp_enqueue_script('botstrap4.style', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js');
-	wp_enqueue_script('bootstrap-datepicker.style', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js');
-	wp_enqueue_script('script.js', get_template_directory_uri() . '/assets/js/script.js', $_FILES, true);
-}
+
+
 
 function theme_register_nav_menu()
 {
@@ -275,3 +269,42 @@ add_filter('excerpt_more', fn () => ' ...');
 add_filter('excerpt_length', function () {
 	return 25;
 });
+
+/**
+ * Enqueue custom scripts and pass room prices to the client-side using wp_add_inline_script().
+ */
+function single_custom_price()
+{
+	if (is_singular('room')) {
+		$post_id = get_the_ID();
+		$room_prices[] = array(
+			'price_segment1' => get_field('single_price_1', $post_id),
+			'price_segment2' => get_field('single_price_2', $post_id),
+			'price_segment3' => get_field('single_price_3', $post_id),
+			'price_segment4' => get_field('single_price_4', $post_id),
+		);
+
+		wp_enqueue_script('my-script', get_template_directory_uri() . '/assets/js/single_data_price.js', array(), '1.0', true);
+
+		wp_add_inline_script('my-script', 'const roomPrices = ' . wp_json_encode($room_prices), 'before');
+	} else {
+		$arrPrice = [];
+		$repeater_table_field = get_field('table', 'option');
+
+		if ($repeater_table_field) {
+			while (have_rows('table', 'option')) {
+				the_row();
+				while (have_rows('table_subhead', 'option')) {
+					the_row();
+					$price = get_sub_field('table_price', 'option');
+					array_push($arrPrice, $price);
+				}
+			}
+		}
+
+		wp_enqueue_script('my-script2', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), '1.0', true);
+
+		wp_add_inline_script('my-script2', 'const arrPrice = ' . wp_json_encode($arrPrice), 'before');
+	}
+}
+add_action('wp_enqueue_scripts', 'single_custom_price');

@@ -6,26 +6,7 @@ $tel2 = get_field('tel_2', 'option');
 $mail = get_field('email', 'option');
 
 $attr = ['class' => 'd-block w-100', 'alt' => '...'];
-
-
-$arrPrice = [];
-$repeater_table_field = get_field('table', 'option');
-$page_id = get_the_ID();
-
-
-if ($repeater_table_field) :
-    while (have_rows('table', 'option')) : the_row();
-        while (have_rows('table_subhead', 'option')) : the_row();
-            $price = get_sub_field('table_price', 'option');
-            array_push($arrPrice, $price);
-        endwhile;
-    endwhile;
-endif;
 ?>
-
-<script>
-    <?php echo "var arrPrice=" . json_encode($arrPrice, JSON_FORCE_OBJECT); ?>    
-</script>
 
 <!-- Booking Section
    ================================================== -->

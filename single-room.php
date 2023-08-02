@@ -118,7 +118,7 @@ while (have_posts()) :
                                     <div class="row form-group">
                                         <div>
                                             <div class="input-group date" id="datepicker">
-                                                <input type="text" class="form-control">
+                                                <input id="check-in" type="text" class="form-control">
                                                 <span class="input-group-append">
                                                     <span class="input-group-text bg-white">
                                                         <i class="fa fa-calendar"></i>
@@ -140,7 +140,7 @@ while (have_posts()) :
                                 <div class="row form-group">
                                     <div>
                                         <div class="input-group date" id="datepicker-2">
-                                            <input type="text" class="form-control">
+                                            <input id="check-out" data-key="2" type="text" class="form-control">
                                             <span class="input-group-append">
                                                 <span class="input-group-text bg-white">
                                                     <i class="fa fa-calendar"></i>
@@ -157,11 +157,7 @@ while (have_posts()) :
                 <div class="col-md-6 col-12">
                     <div class="zoom-room-booking-text">
                         <div class="zoom-room-booking-text-head">
-                            <p><span class="booking-span-title">Всього:</span><span class="zoom-room-booking-span-text">
-                                    11500 грн (7 ночей)</span></p>
-                        </div>
-                        <div class="zoom-room-booking-text-one">
-                            <p>(2 ночі по 1800 - 3600грн; 5 ночей по 2200 - 11000грн; Всього 14600грн )</p>
+                            <p><span class="booking-span-title">Всього:</span> <span id="price" class=""></span><span id="nights"></span></p>
                         </div>
                         <div class="zoom-room-booking-text-one">
                             <p>Бронювання здійснюється за телефоном або електронною поштою.</p>

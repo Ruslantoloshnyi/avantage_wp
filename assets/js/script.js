@@ -21,7 +21,6 @@ $(function () {
     $('#datepicker-2').datepicker();
 });
 
-console.log(page_id);
 console.log(arrPrice);
 
 function getDayofYear(date) {
@@ -324,63 +323,7 @@ $(document).ready(function () {
             };
         });
     };
-
-    if (checkOut.dataset.key == 'zoom-room') {
-        $('#check-out').change(function () {
-            let valueIn = checkIn.value;
-            let valueOut = checkOut.value;
-
-            let valueInArr = valueIn.split('/');
-            let valueOutArr = valueOut.split('/');
-
-            let date = new Date(valueInArr[2], valueInArr[0] - 1, valueInArr[1]);
-            let date2 = new Date(valueOutArr[2], valueOutArr[0] - 1, valueOutArr[1]);
-
-            let dayOfYearIn = getDayofYear(date);
-            let dayOfYearOut = getDayofYear(date2);
-            let sumOfDays = dayOfYearOut - dayOfYearIn;
-
-            function getSumPrice(arr) {
-                let sumPrice = 0;
-                for (let i = 0; i < sumOfDays; i++) {
-                    let elem = dayOfYearIn + i;
-                    sumPrice = sumPrice + Number(arr[elem]);
-                };
-                return sumPrice;
-            };
-
-            const dayOfYearInStr = String(dayOfYearIn);
-            const dayOfYearOutStr = String(dayOfYearOut);
-
-            if (keys.includes(dayOfYearInStr) && keys.includes(dayOfYearOutStr)) {
-                
-                if (page_id == '242'){
-                    price.textContent = getSumPrice(luxTwo);
-                }
-                else if (page_id == '246'){
-                    price.textContent = getSumPrice(comfortTwo);
-                }
-                else if (page_id == '259'){
-                    price.textContent = getSumPrice(luxThree);
-                }
-                else if (page_id == '261'){
-                    price.textContent = getSumPrice(comfortThree);
-                }
-                else if (page_id == '265'){
-                    price.textContent = getSumPrice(luxFour);
-                }
-                else if (page_id == '267'){
-                    price.textContent = getSumPrice(luxFourTwo);
-                }
-                
-                nigts.textContent = '   ' + sumOfDays + '(ночей)';
-            }
-            else {
-                price.textContent = 'Введіть дату з червня по вересень';
-                nigts.textContent = '';
-            };
-        });
-    };
+    
 });
 
 

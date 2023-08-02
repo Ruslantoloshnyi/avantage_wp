@@ -642,6 +642,9 @@
 }
 
 /*Booking section*/
+.booking {
+    margin-bottom: 100px;
+}
 
 .booking h1 {
     font-family: 'Merriweather', sans-serif;
