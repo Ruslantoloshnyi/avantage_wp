@@ -3,10 +3,10 @@
     "title": "Photo_page",
     "fields": [
         {
-            "key": "field_639ddead49feb",
-            "label": "photo_page_content",
-            "name": "photo_page_content",
-            "type": "flexible_content",
+            "key": "field_64cbb1d605504",
+            "label": "Photo content",
+            "name": "photo_content",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,90 +15,56 @@
                 "class": "",
                 "id": ""
             },
-            "layouts": {
-                "layout_639ddf1a34c2b": {
-                    "key": "layout_639ddf1a34c2b",
-                    "name": "photo_section",
-                    "label": "photo_section",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_639ddf4049fec",
-                            "label": "photo_content",
-                            "name": "photo_content",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "collapsed": "",
-                            "min": 0,
-                            "max": 0,
-                            "layout": "table",
-                            "button_label": "",
-                            "sub_fields": [
-                                {
-                                    "key": "field_639ddf8e49fed",
-                                    "label": "photo_image",
-                                    "name": "photo_image",
-                                    "type": "image",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "return_format": "id",
-                                    "preview_size": "full",
-                                    "library": "all",
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": ""
-                                },
-                                {
-                                    "key": "field_639de3ad381ff",
-                                    "label": "photo_image_2",
-                                    "name": "photo_image_2",
-                                    "type": "image",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "return_format": "id",
-                                    "preview_size": "full",
-                                    "library": "all",
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": ""
-                                }
-                            ]
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
+            "collapsed": "",
+            "min": 4,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_64cbb20a05505",
+                    "label": "photo image",
+                    "name": "photo_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "full",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_64cbb22205506",
+                    "label": "photo text",
+                    "name": "photo_text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
                 }
-            },
-            "button_label": "Add Row",
-            "min": "",
-            "max": ""
+            ]
         }
     ],
     "location": [
@@ -118,5 +84,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1676478822
+    "modified": 1691072978
 }

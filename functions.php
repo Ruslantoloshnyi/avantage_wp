@@ -307,3 +307,29 @@ function single_custom_price()
 	}
 }
 add_action('wp_enqueue_scripts', 'single_custom_price');
+
+// add weather shortcode
+function avantage_weather_widget_shortcode()
+{
+	ob_start();
+?>
+	<div class="weather">
+		<div class="weather-widget">
+			<div class="weather-header">
+				<div class="city" id="city-name">Залізний Порт</div>
+				<div class="weather-icon">
+					<img id="weather-icon-img" src="" alt="Weather Icon">
+				</div>
+			</div>
+			<div class="weather-info">
+				<div class="temperature" id="temperature">25°C</div>
+				<div class="description" id="weather-description">Ясно</div>
+				<div class="feels-like">Відчувається як: <span id="feels-like">28°C</span></div>
+				<div class="feels-like">Вітер: <span id="wind">28 м/с</span></div>
+			</div>
+		</div>
+	</div>
+<?php
+	return ob_get_clean();
+}
+add_shortcode('avantage_weather_widget', 'avantage_weather_widget_shortcode');
