@@ -44,6 +44,25 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": ""
+                },
+                {
+                    "key": "field_64ce3e4b8d209",
+                    "label": "single room pic text",
+                    "name": "single_room_pic_text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         },
@@ -285,5 +304,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1690634346
+    "modified": 1691238769
 }

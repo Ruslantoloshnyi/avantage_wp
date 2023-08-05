@@ -41,6 +41,9 @@ $query = new WP_Query($args);
                                 ?>
                                         <div class="card-pinc">
                                             <?php echo $image; ?>
+                                            <div class="image-overlay">
+                                                <div><?php echo get_sub_field('single_room_pic_text'); ?></div>
+                                            </div>
                                         </div>
                                     <?php endwhile; ?>
                                 <?php endif; ?>

@@ -949,14 +949,51 @@ footer {
 
 .card-pinc {
     margin-right: 12px;
+    position: relative;
+    display: inline-block;
+}
+@media(max-width: 375px) {
+    .card-pinc {
+        margin-right: 8px;
+    }
+}
+
+.card-pinc img {
+    border-radius: 0;
 }
 
 @media(max-width: 424px) {
     .card-pinc img {
         width: 80%;
-        height: 80%;        
+        height: 80%;
+        border-radius: 0;        
     }
 }
+
+.image-overlay {
+    position: absolute;
+    bottom: -150%;
+    left: -10%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
+    width: 120px;
+    font-size: 12px;
+    border-radius: 15px;
+  }
+  @media(max-width: 375px) {
+    .image-overlay {
+        width: 80px;
+        font-size: 10px;
+    }
+  }  
+  
+  .card-pinc:hover .image-overlay {
+    opacity: 1;
+  }
 
 .container-card {
     margin-left: 50px;
@@ -1008,6 +1045,54 @@ footer {
     }
 }
 
+.card-footer a {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    /* background: #e1e1e1; */
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.card-footer a::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1ABC9C;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: 30px;
+}
+
+.card-footer a:hover, .card-footer a:focus, .card-footer a:active {
+    color: white;
+  }
+  .card-footer a:hover:before, .card-footer a:focus:before, .card-footer a:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+/* .card-footer a:hover {
+    color: #4A4646;    
+} */
+
 .rooms-button {
     background-color: white;
     border: 2px solid #1ABC9C;
@@ -1033,6 +1118,48 @@ footer {
         font-size: 16px;
     }   
 }
+
+/* Shutter Out Vertical */
+.hvr-shutter-out-vertical {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    background: #e1e1e1;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-shutter-out-vertical:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #2098D1;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-shutter-out-vertical:hover, .hvr-shutter-out-vertical:focus, .hvr-shutter-out-vertical:active {
+    color: white;
+  }
+  .hvr-shutter-out-vertical:hover:before, .hvr-shutter-out-vertical:focus:before, .hvr-shutter-out-vertical:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
 
 .card-price {
     font-family: 'Montserrat' sans-serif;
@@ -1318,7 +1445,6 @@ footer {
 }
 
 /*Booking*/
-
 .booking-title h2{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -1524,6 +1650,13 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 30%;
   }
+
+  @media(max-width: 1399px) {
+    .weather-widget {
+        width: 40%;
+    }
+  }
+
   @media(max-width: 1199px) {
     .weather-widget {
         width: 50%;
@@ -1614,4 +1747,12 @@ footer {
     animation: wave 3s ease-in-out infinite;
   }
   
-
+  /* Общий контейнер для картинки и оверлея */
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  
+  
+  
