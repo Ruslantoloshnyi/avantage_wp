@@ -289,35 +289,77 @@ $(document).ready(function () {
                 for (let elem2 of carouselItems) {
                     if (elem2.classList.contains('active')) {
                         if (elem2.dataset.key == 1) {
+                            price.classList.remove('fade-in')
                             price.textContent = getSumPrice(luxTwo);
+                            void price.offsetWidth;
+                            price.classList.add('fade-in');
+                            nigts.classList.remove('fade-in');
                             nigts.textContent = '   ' + '(' + sumOfDays + ' ночей)';
+                            void nigts.offsetWidth;
+                            nigts.classList.add('fade-in');
                         }
                         else if (elem2.dataset.key == 2) {
+                            price.classList.remove('fade-in')
                             price.textContent = getSumPrice(comfortTwo);
+                            void price.offsetWidth;
+                            price.classList.add('fade-in');
+                            nigts.classList.remove('fade-in');
                             nigts.textContent = '   ' + '(' + sumOfDays + ' ночей)';
+                            void nigts.offsetWidth;
+                            nigts.classList.add('fade-in');                           
                         }
                         else if (elem2.dataset.key == 3) {
+                            price.classList.remove('fade-in')
                             price.textContent = getSumPrice(luxThree);
+                            void price.offsetWidth;
+                            price.classList.add('fade-in');
+                            nigts.classList.remove('fade-in');
                             nigts.textContent = '   ' + '(' + sumOfDays + ' ночей)';
+                            void nigts.offsetWidth;
+                            nigts.classList.add('fade-in');                            
                         }
                         else if (elem2.dataset.key == 4) {
+                            price.classList.remove('fade-in')
                             price.textContent = getSumPrice(comfortThree);
+                            void price.offsetWidth;
+                            price.classList.add('fade-in');
+                            nigts.classList.remove('fade-in');
                             nigts.textContent = '   ' + '(' + sumOfDays + ' ночей)';
+                            void nigts.offsetWidth;
+                            nigts.classList.add('fade-in');                             
                         }
                         else if (elem2.dataset.key == 5) {
+                            price.classList.remove('fade-in')
                             price.textContent = getSumPrice(luxFour);
+                            void price.offsetWidth;
+                            price.classList.add('fade-in');
+                            nigts.classList.remove('fade-in');
                             nigts.textContent = '   ' + '(' + sumOfDays + ' ночей)';
+                            void nigts.offsetWidth;
+                            nigts.classList.add('fade-in');                            
                         }
                         else if (elem2.dataset.key == 6) {
+                            price.classList.remove('fade-in');
                             price.textContent = getSumPrice(luxFourTwo);
+                            void price.offsetWidth;
+                            price.classList.add('fade-in');
+                            nigts.classList.remove('fade-in');
                             nigts.textContent = '   ' + '(' + sumOfDays + ' ночей)';
+                            void nigts.offsetWidth;
+                            nigts.classList.add('fade-in');                           
                         }
                     };
                 };
             }
             else {
+                price.classList.remove('fade-in');
                 price.textContent = 'Введіть дату з червня по вересень';
+                void price.offsetWidth;
+                price.classList.add('fade-in');
+                nigts.classList.remove('fade-in');
                 nigts.textContent = '';
+                void nigts.offsetWidth;
+                nigts.classList.add('fade-in');
             };
         });
     };

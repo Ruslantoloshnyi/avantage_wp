@@ -101,13 +101,27 @@ let singleNigts = document.querySelector('#nights');
             const dayOfYearInStr = String(dayOfYearIn);
             const dayOfYearOutStr = String(dayOfYearOut);
 
-            if (singleKeys.includes(dayOfYearInStr) && singleKeys.includes(dayOfYearOutStr)) {                
+            if (singleKeys.includes(dayOfYearInStr) && singleKeys.includes(dayOfYearOutStr)) {  
+              singlePrice.classList.remove('fade-in');              
               singlePrice.textContent = getSumPrice(dataObjects);
+              void singlePrice.offsetWidth;
+              singlePrice.classList.add('fade-in');
+
+              singleNigts.classList.remove('fade-in');
               singleNigts.textContent = '   ' + sumOfDays + '(ночей)';
+              void singleNigts.offsetWidth;
+              singleNigts.classList.add('fade-in');
             }
             else {
+                singlePrice.classList.remove('fade-in');
                 singlePrice.textContent = 'Введіть дату з червня по вересень';
+                void singlePrice.offsetWidth;
+                singlePrice.classList.add('fade-in');
+
+                singleNigts.classList.remove('fade-in');
                 singleNigts.textContent = '';
+                void singleNigts.offsetWidth;
+                singleNigts.classList.add('fade-in');
             };
         });
     };

@@ -1580,6 +1580,17 @@ footer {
     font-family: 'Montserrat', sans-serif;
 }
 
+/* CSS стили анимации */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1.5s ease; /* Длительность анимации 1 секунда */
+  }
+  
+
 .booking-table {    
     text-align: center;    
 }
