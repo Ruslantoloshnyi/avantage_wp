@@ -108,7 +108,7 @@ let singleNigts = document.querySelector('#nights');
               singlePrice.classList.add('fade-in');
 
               singleNigts.classList.remove('fade-in');
-              singleNigts.textContent = '   ' + sumOfDays + '(ночей)';
+              singleNigts.textContent = '   ' + '(' + sumOfDays + ' ночей)';
               void singleNigts.offsetWidth;
               singleNigts.classList.add('fade-in');
             }
