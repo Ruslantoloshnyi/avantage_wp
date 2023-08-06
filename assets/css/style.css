@@ -398,6 +398,14 @@
     }
 }
 
+.nav-item a:hover {
+    color: #ffffff;
+}
+
+.nav-item a.active {
+    color: #ffffff;
+}
+
 
 .title-head h1 {
     font-family: 'Merriweather', sans-serif;
@@ -892,15 +900,25 @@ footer {
     font-size: 18px;
     line-height: 22px;
     text-decoration: none;
-    color: #ffff !important;
+    display: inline;
+    color: #ffff;
+    
 }
 
-.footer-nav-line {
-    text-decoration: underline;
+.footer-nav a:hover {
+    color: #4A4646;
 }
+
+.footer-nav a.active {
+    color: #4A4646;
+}
+
+/* .footer-nav-line {
+    text-decoration: underline;
+} */
 
 .footer-nav li {
-    padding-top: 50px;
+    padding-top: 50px;   
 }
 
 /*Rooms*/
@@ -990,7 +1008,8 @@ footer {
 .card-pinc {
     margin-right: 12px;
     position: relative;
-    display: inline-block;
+    display: inline-block;   
+    /* overflow: hidden; */
 }
 @media(max-width: 375px) {
     .card-pinc {
@@ -1022,7 +1041,7 @@ footer {
     transition: opacity 0.3s ease-in-out; 
     width: 120px;
     font-size: 12px;
-    border-radius: 15px;
+    border-radius: 15px;    
   }
   @media(max-width: 375px) {
     .image-overlay {
@@ -1031,7 +1050,7 @@ footer {
     }
   }  
   
-  .card-pinc:hover .image-overlay {
+  .card-pinc img:hover + .image-overlay {
     opacity: 1;
   }
 
@@ -1440,7 +1459,7 @@ footer {
     font-size: 22px;
     line-height: 27px;
     color: #1ABC9C;
-}
+} 
 
 .zoom-room-table {
     width: 99%;
@@ -1518,6 +1537,7 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 30px;
 }
 
 .booking-price-content {
@@ -1560,14 +1580,8 @@ footer {
     font-family: 'Montserrat', sans-serif;
 }
 
-.booking-table {
-    /* overflow-x: auto; */
+.booking-table {    
     text-align: center;    
-}
-@media(max-width: 1023px) {
-    .booking-table {
-        display: none;
-    }
 }
 
 .booking-table table {
@@ -1577,6 +1591,22 @@ footer {
 .booking-table tr {
     height: 60px;
 }
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  th.booking-table-one {
+    position: sticky;
+    left: 0;
+    background-color: #fff;
+    z-index: 1;
+  }
+  
+  table {
+    border-collapse: collapse;
+  } 
 
 .booking-table th {
     font-family: 'Montserrat', sans-serif;
@@ -1588,6 +1618,16 @@ footer {
     color: #000000;
     border-bottom: 1px solid #1ABC9C;
     border-right: 1px solid #1ABC9C;
+}
+@media(max-width: 990px) {
+    .booking-table th {
+        font-size: 14px;
+    }
+}
+@media(max-width: 500px) {
+    .booking-table th {
+        font-size: 10px;
+    }
 }
 
 .booking-table td {
@@ -1602,8 +1642,18 @@ footer {
     padding-left: 20px;
     vertical-align: bottom;
 }
+@media(max-width: 990px) {
+    .booking-table td {
+        font-size: 18px;
+    }
+}
+@media(max-width: 500px) {
+    .booking-table td {
+        font-size: 14px;
+    }
+}
 
-.booking-table td.booking-table-one {
+.booking-table th.booking-table-one {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -1612,9 +1662,19 @@ footer {
     color: #1ABC9C;
     padding-left: 0px;
 }
+@media(max-width: 990px) {
+    .booking-table th.booking-table-one {
+        font-size: 18px;
+    }
+}
+@media(max-width: 500px) {
+    .booking-table th.booking-table-one {
+        font-size: 14px;
+    }
+}
 
 .map-section {
-    margin-bottom: 60px;
+    margin-bottom: 60px;    
 }
 
 .map-responsive {
@@ -1630,6 +1690,7 @@ footer {
     height: 100%;
     width: 100%;
     position: absolute;
+    border-radius: 30px;
 }
 
 .booking-map-text {
@@ -1656,10 +1717,20 @@ footer {
     left: 10%;
 }
 
+.photo-card {
+    text-align: center;
+    border-radius: 32px 32px 32px 32px;
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
+    width: 48%;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .rooms-card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 30px;
 }
 
 .rooms-photo-content {

@@ -12,32 +12,32 @@ $repeater_table_field = get_field('table', 'option');
         <section class="booking-table">
             <div class="col-12">
                 <div class="row">
-
-                    <table>
-                        <tr>
-                            <th> </th>
-                            <th>Комфорт для двох</th>
-                            <th>Комфорт для трьох</th>
-                            <th>Люкс для двох</th>
-                            <th>Люкс для трьох</th>
-                            <th>Люкс для чотирьох</th>
-                            <th>Двокімнатний люкс<br>для чотирьох</th>
-                        </tr>
-                        <?php while (have_rows('table', 'option')) : the_row();
-                            $head = get_sub_field('table_head');
-                        ?>
+                    <div class="table-wrapper">
+                        <table class="data-table">
                             <tr>
-                                <td class="booking-table-one"><?php echo $head; ?></td>
-
-                                <?php while (have_rows('table_subhead', 'option')) : the_row();
-                                    $price = get_sub_field('table_price', 'option');
-                                ?>
-                                    <td><?php echo $price; ?></td>
-                                <?php endwhile; ?>
+                                <th class="booking-table-one"> </th>
+                                <th>Комфорт для двох</th>
+                                <th>Комфорт для трьох</th>
+                                <th>Люкс для двох</th>
+                                <th>Люкс для трьох</th>
+                                <th>Люкс для чотирьох</th>
+                                <th>Двокімнатний люкс<br>для чотирьох</th>
                             </tr>
-                        <?php endwhile; ?>
-                    </table>
+                            <?php while (have_rows('table', 'option')) : the_row();
+                                $head = get_sub_field('table_head');
+                            ?>
+                                <tr>
+                                    <th class="booking-table-one"><?php echo $head; ?></th>
 
+                                    <?php while (have_rows('table_subhead', 'option')) : the_row();
+                                        $price = get_sub_field('table_price', 'option');
+                                    ?>
+                                        <td><?php echo $price; ?></td>
+                                    <?php endwhile; ?>
+                                </tr>
+                            <?php endwhile; ?>
+                        </table>
+                    </div>
                 </div>
             </div>
         </section>

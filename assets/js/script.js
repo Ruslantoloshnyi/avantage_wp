@@ -339,8 +339,7 @@ async function loadWeather(e) {
     const response = await fetch(server, {
         method: 'GET',
     });
-    const responseResult = await response.json();
-    console.log(responseResult);
+    const responseResult = await response.json();    
     if (response.ok) {
         getWeather(responseResult);
     } else {
