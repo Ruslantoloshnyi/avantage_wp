@@ -39,7 +39,6 @@ $id_room = get_permalink($id);
     ================================================== -->
 <header class="header">
     <div class="container">
-
         <nav class="navbar navbar-expand-md navbar-light bg-avantage">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#"></a>
@@ -54,33 +53,23 @@ $id_room = get_permalink($id);
                 </div>
             </div>
         </nav>
-
         <div class="container">
-
             <section id="title" class="title-section">
-
                 <div class="title">
-
                     <div class="title-head">
                         <h1>Готель “Авантаж”</h1>
                     </div>
-
                     <div class="title-content">
                         <p>Сучасний комфортабельний готель <br> за два кроки від пляжу</p>
                     </div>
-
                     <div class="title-foot">
                         <p>Залізний Порт</p>
                     </div>
-
-                    <a href="<?php echo $id_room; ?>"><button type="button" style="background-color: #1ABC9C" class="btn btn-primary title-href">Обрати
-                            номер
-                        </button></a>
-
+                    <div class="card-footer">
+                        <a href="<?php echo $id_room; ?>" class="rooms-button">Обрати номер</a>
+                    </div>
                 </div>
-
             </section>
-
         </div>
     </div>
 </header> <!-- Header End -->

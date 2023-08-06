@@ -358,6 +358,10 @@
     
 }
 
+.header-photo-page {
+    background-color: #d3d0d0;
+}
+
 
 @media (max-width: 991px) {
     .header {
@@ -480,6 +484,15 @@
 
 .img-one {
     height: 115px;
+}
+
+.img-one img {
+    max-width: 80%;
+}
+@media(max-width: 375px) {
+    .img-one img {
+        max-width: 60%;
+    }
 }
 
 .info-one {
@@ -702,6 +715,15 @@ span.booking-span-price {
     color: #000000;
 }
 
+.booking-text {
+    margin-top: -30px;
+}
+@media(max-width: 768px) {
+    .booking-text {
+        margin-top: 20px;
+    }
+}
+
 span.booking-text-content {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
@@ -797,7 +819,20 @@ footer {
 
 .footer_content_data__social {
     margin-top: 40px;
-    display: flex;   
+    display: flex;  
+    justify-content: space-between; 
+    padding-right: 224px;
+}
+@media(max-width: 1023px) {
+    .footer_content_data__social {
+        padding-right: 85px;
+    }
+}
+
+@media(max-width: 990px) {
+    .footer_content_data__social {
+        padding-right: 0;
+    }
 }
 
 .footer_content_data__social a {
@@ -807,15 +842,15 @@ footer {
 @media(max-width: 500px) {
     .footer_content_data__social {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;        
         text-align: center;
     }
 }
 
 .footer-copyright {
     display: flex;
-    justify-content: space-around;
-    margin-top: 15px;
+    justify-content: space-between;
+    margin-top: 35px;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 100;
@@ -834,7 +869,12 @@ footer {
 }
 
 .footer_contact_data__cont {
-    padding-right: 32px;
+    padding-right: 51px;    
+}
+@media(max-width: 500px) {
+    .footer_contact_data__cont {
+        padding-right: 0;
+    }
 }
 
 .footer-menu ul {
@@ -880,8 +920,8 @@ footer {
 }
 
 .rooms-card-image {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 .header-rooms {
@@ -1729,8 +1769,7 @@ footer {
   .weather-widget {
     animation: fadeIn 1s ease-in-out;
   }
-
-  /* Анимация волны при наведении */
+  
 @keyframes wave {
     0% {
       transform: scale(1);
@@ -1745,9 +1784,8 @@ footer {
   
   .weather-widget:hover {
     animation: wave 3s ease-in-out infinite;
-  }
+  }  
   
-  /* Общий контейнер для картинки и оверлея */
 .image-container {
     position: relative;
     display: inline-block;

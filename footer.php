@@ -2,6 +2,7 @@
 $tel_1 = get_field('tel_1', 'option');
 $tel_2 = get_field('tel_2', 'option');
 $mail = get_field('email', 'option');
+$currentYear = date('Y');
 ?>
 
 <footer>
@@ -33,13 +34,17 @@ $mail = get_field('email', 'option');
 					</div>
 				</div>
 				<div class="footer_content_data__social">
-					<a href="https://www.facebook.com/profile.php?id=100069532664457"><img src="<?php echo get_template_directory_uri() . '/assets/image/facebook.png'; ?>" alt=""></a>
-					<a href="https://instagram.com/avantagehotel?igshid=MzRlODBiNWFlZA=="><img src="<?php echo get_template_directory_uri() . '/assets/image/instagram.png'; ?>" alt=""></a>
+					<div>Соцмережі:</div>
+					<div>
+						<a href="https://www.facebook.com/profile.php?id=100069532664457"><img src="<?php echo get_template_directory_uri() . '/assets/image/facebook.png'; ?>" alt=""></a>
+						<a href="https://instagram.com/avantagehotel?igshid=MzRlODBiNWFlZA=="><img src="<?php echo get_template_directory_uri() . '/assets/image/instagram.png'; ?>" alt=""></a>
+					</div>
+
 				</div>
 			</div>
 		</div>
 		<div class="footer-copyright">
-			<div class="footer-copyright__autor">Copiright &#169; 2022 Ruslan Toloshnyi</div>
+			<div class="footer-copyright__autor">&#169; 2022 &ndash; <?php echo $currentYear; ?> Ruslan Toloshnyi</div>
 			<div class="footer-copyright__email">ruslantoloshnyi@gmail.com</div>
 		</div>
 	</div>

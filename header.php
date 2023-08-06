@@ -47,7 +47,7 @@
 
 <!-- Header
     ================================================== -->
-<header>
+<header class="header-photo-page">
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-light bg-avantage">
             <div class="container-fluid">

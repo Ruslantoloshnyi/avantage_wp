@@ -278,7 +278,7 @@ $(document).ready(function () {
                     let elem = dayOfYearIn + i;
                     sumPrice = sumPrice + Number(arr[elem]);
                 };
-                return sumPrice;
+                return sumPrice + ' грн';
             };
 
             const dayOfYearInStr = String(dayOfYearIn);
@@ -290,27 +290,27 @@ $(document).ready(function () {
                     if (elem2.classList.contains('active')) {
                         if (elem2.dataset.key == 1) {
                             price.textContent = getSumPrice(luxTwo);
-                            nigts.textContent = '   ' + sumOfDays + '(ночей)';
+                            nigts.textContent = '   ' + '(' + sumOfDays + ' ночей)';
                         }
                         else if (elem2.dataset.key == 2) {
                             price.textContent = getSumPrice(comfortTwo);
-                            nigts.textContent = '   ' + sumOfDays + '(ночей)';
+                            nigts.textContent = '   ' + '(' + sumOfDays + ' ночей)';
                         }
                         else if (elem2.dataset.key == 3) {
                             price.textContent = getSumPrice(luxThree);
-                            nigts.textContent = '   ' + sumOfDays + '(ночей)';
+                            nigts.textContent = '   ' + '(' + sumOfDays + ' ночей)';
                         }
                         else if (elem2.dataset.key == 4) {
                             price.textContent = getSumPrice(comfortThree);
-                            nigts.textContent = '   ' + sumOfDays + '(ночей)';
+                            nigts.textContent = '   ' + '(' + sumOfDays + ' ночей)';
                         }
                         else if (elem2.dataset.key == 5) {
                             price.textContent = getSumPrice(luxFour);
-                            nigts.textContent = '   ' + sumOfDays + '(ночей)';
+                            nigts.textContent = '   ' + '(' + sumOfDays + ' ночей)';
                         }
                         else if (elem2.dataset.key == 6) {
                             price.textContent = getSumPrice(luxFourTwo);
-                            nigts.textContent = '   ' + sumOfDays + '(ночей)';
+                            nigts.textContent = '   ' + '(' + sumOfDays + ' ночей)';
                         }
                     };
                 };
