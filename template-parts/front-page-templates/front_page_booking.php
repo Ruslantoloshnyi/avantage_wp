@@ -33,22 +33,22 @@ $attr = ['class' => 'd-block w-100', 'alt' => '...'];
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="100000">
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-key="1">
-                            <?php echo  wp_get_attachment_image($field['front_page_slider_image_1'], 'full', false, $attr); ?>
+                            <?php echo  wp_get_attachment_image($field['front_page_slider_image_1'], 'large', false, $attr); ?>
                         </div>
                         <div class="carousel-item" data-key="2">
-                            <?php echo wp_get_attachment_image($field['front_page_slider_image_2'], 'full', false, $attr); ?>
+                            <?php echo wp_get_attachment_image($field['front_page_slider_image_2'], 'large', false, $attr); ?>
                         </div>
                         <div class="carousel-item" data-key="3">
-                            <?php echo wp_get_attachment_image($field['front_page_slider_image_3'], 'full', false, $attr); ?>
+                            <?php echo wp_get_attachment_image($field['front_page_slider_image_3'], 'large', false, $attr); ?>
                         </div>
                         <div class="carousel-item" data-key="4">
-                            <?php echo wp_get_attachment_image($field['front_page_slider_image_4'], 'full', false, $attr); ?>
+                            <?php echo wp_get_attachment_image($field['front_page_slider_image_4'], 'large', false, $attr); ?>
                         </div>
                         <div class="carousel-item" data-key="5">
-                            <?php echo wp_get_attachment_image($field['front_page_slider_image_5'], 'full', false, $attr); ?>
+                            <?php echo wp_get_attachment_image($field['front_page_slider_image_5'], 'large', false, $attr); ?>
                         </div>
                         <div class="carousel-item" data-key="6">
-                            <?php echo wp_get_attachment_image($field['front_page_slider_image_6'], 'full', false, $attr); ?>
+                            <?php echo wp_get_attachment_image($field['front_page_slider_image_6'], 'large', false, $attr); ?>
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

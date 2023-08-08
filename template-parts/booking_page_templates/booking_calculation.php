@@ -7,12 +7,12 @@ $image4 = get_sub_field('booking_calculation_slider_image_4');
 $image5 = get_sub_field('booking_calculation_slider_image_5');
 $image6 = get_sub_field('booking_calculation_slider_image_6');
 $attr = ['class' => 'd-block w-100', 'alt' => '...'];
-$img1 = wp_get_attachment_image($image1, 'full', false, $attr);
-$img2 = wp_get_attachment_image($image2, 'full', false, $attr);
-$img3 = wp_get_attachment_image($image3, 'full', false, $attr);
-$img4 = wp_get_attachment_image($image4, 'full', false, $attr);
-$img5 = wp_get_attachment_image($image5, 'full', false, $attr);
-$img6 = wp_get_attachment_image($image6, 'full', false, $attr);
+$img1 = wp_get_attachment_image($image1, 'medium', false, $attr);
+$img2 = wp_get_attachment_image($image2, 'medium', false, $attr);
+$img3 = wp_get_attachment_image($image3, 'medium', false, $attr);
+$img4 = wp_get_attachment_image($image4, 'medium', false, $attr);
+$img5 = wp_get_attachment_image($image5, 'medium', false, $attr);
+$img6 = wp_get_attachment_image($image6, 'medium', false, $attr);
 ?>
 
 <!-- Booking calculation section

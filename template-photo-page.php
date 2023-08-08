@@ -14,7 +14,7 @@ get_header();
             <?php
             if (have_rows('photo_content')) :
                 while (have_rows('photo_content')) : the_row();
-                    $img = wp_get_attachment_image(get_sub_field('photo_image'), 'full', false);
+                    $img = wp_get_attachment_image(get_sub_field('photo_image'), 'large', false);
             ?>
                     <div class="photo-card ">
                         <div class="rooms-card-image">

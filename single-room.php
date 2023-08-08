@@ -15,7 +15,7 @@ while (have_posts()) :
                         <?php
                         if (have_rows('single_room_image')) :
                             while (have_rows('single_room_image')) : the_row();
-                                $image = wp_get_attachment_image(get_sub_field('room_img'), 'full', false, ['class' => 'zoom-room-pic-img']);
+                                $image = wp_get_attachment_image(get_sub_field('room_img'), 'large', false, ['class' => 'zoom-room-pic-img']);
                         ?>
                                 <div class="zoom-room-head-discription">
                                     <div class="zoom-room-pic">
@@ -68,15 +68,23 @@ while (have_posts()) :
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="100000">
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-key="1">
-                        <?php echo wp_get_attachment_image(get_field('single_slider_image_1'), 'full', false, ['class' => 'd-block w-100 zoom-slider-img']); ?>
+                        <?php echo wp_get_attachment_image(get_field('single_slider_image_1'), 'large', false, ['class' => 'd-block w-100 zoom-slider-img']); ?>
                     </div>
                     <div class="carousel-item" data-key="2">
-                        <?php echo wp_get_attachment_image(get_field('single_slider_image_2'), 'full', false, ['class' => 'd-block w-100 zoom-slider-img']); ?>
+                        <?php echo wp_get_attachment_image(get_field('single_slider_image_2'), 'large', false, ['class' => 'd-block w-100 zoom-slider-img']); ?>
                     </div>
                     <div class="carousel-item" data-key="3">
-                        <?php echo wp_get_attachment_image(get_field('single_slider_image_3'), 'full', false, ['class' => 'd-block w-100 zoom-slider-img']); ?>
+                        <?php echo wp_get_attachment_image(get_field('single_slider_image_3'), 'large', false, ['class' => 'd-block w-100 zoom-slider-img']); ?>
                     </div>
-
+                    <div class="carousel-item" data-key="4">
+                        <?php echo wp_get_attachment_image(get_field('single_slider_image_4'), 'large', false, ['class' => 'd-block w-100 zoom-slider-img']); ?>
+                    </div>
+                    <div class="carousel-item" data-key="5">
+                        <?php echo wp_get_attachment_image(get_field('single_slider_image_5'), 'large', false, ['class' => 'd-block w-100 zoom-slider-img']); ?>
+                    </div>
+                    <div class="carousel-item" data-key="6">
+                        <?php echo wp_get_attachment_image(get_field('single_slider_image_6'), 'large', false, ['class' => 'd-block w-100 zoom-slider-img']); ?>
+                    </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
