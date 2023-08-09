@@ -20,7 +20,7 @@ get_header();
             ?>
                     <div class="photo-card ">
                         <div class="rooms-card-image">
-                            <a href="<?php echo $img_url; ?>" data-lightbox="room-gallery"><?php echo $img; ?></a>
+                            <a href="<?php echo $img_url; ?>"><?php echo $img; ?></a>
                             <div class="container-card rooms-photo-block">
                                 <div class="rooms-photo-content"><?php echo get_sub_field('photo_text'); ?></div>
                             </div>
