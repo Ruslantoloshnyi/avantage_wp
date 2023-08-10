@@ -28,8 +28,6 @@ $id_room = get_permalink($id);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avantage</title>
 
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Merriweather?query=Merriweather">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <? wp_head();
     ?>
