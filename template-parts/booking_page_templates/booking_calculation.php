@@ -78,7 +78,7 @@ $img6 = wp_get_attachment_image($image6, 'medium', false, $attr);
 
                 <div class="col-md-6 col-12">
 
-                    <div class="row">
+                    <div class="row front-booking-row">
                         <div class="col-md-6 col-12">
                             <div class="container-calendar">
                                 <div class="calendar-head">

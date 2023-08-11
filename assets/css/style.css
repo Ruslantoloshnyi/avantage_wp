@@ -730,6 +730,9 @@ span.booking-span-price {
     .booking-text {
         margin-top: 20px;
     }
+    .row .front-booking-row {
+        margin-top: 20px;
+    }
 }
 
 span.booking-text-content {
@@ -745,7 +748,6 @@ span.booking-text-content {
         font-size: 14px;
     }
 }
-
 
 /*footer*/
 

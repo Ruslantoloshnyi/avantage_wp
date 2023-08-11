@@ -65,7 +65,7 @@ $attr = ['class' => 'd-block w-100', 'alt' => '...'];
 
             <div class="col-md-6 col-12">
 
-                <div class="row">
+                <div class="row front-booking-row">
 
                     <div class="col-md-6 col-12">
                         <div class="container-calendar">
